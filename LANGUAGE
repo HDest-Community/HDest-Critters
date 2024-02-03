@@ -1,12 +1,16 @@
 [en default]
 
 // Tags
-TAG_DOGGY       = "Doggy";
-TAG_WITHERED    = "Withered";
+TAG_DOGGY         = "Doggy";
+TAG_GIBMONSTER    = "Gib";
+TAG_WITHERED      = "Withered";
 
 // Obituaries
-OB_DOGGY        = "%o was mauled by a doggy.";
-OB_DOGGY_HIT    = "%o was mauled by a doggy.";
+OB_DOGGY          = "%o was mauled by a doggy.";
+OB_DOGGY_HIT      = "%o was mauled by a doggy.";
 
-OB_WITHERED     = "%o brain got eaten by Zombie.";
-OB_WITHERED_HIT = "%o brain got eaten by Zombie.";
+OB_GIBMONSTER     = "%o was chewed by a reanimated gib";
+OB_GIBMONSTER_HIT = "%o was chewed by a reanimated gib";
+
+OB_WITHERED       = "%o brain got eaten by Zombie.";
+OB_WITHERED_HIT   = "%o brain got eaten by Zombie.";

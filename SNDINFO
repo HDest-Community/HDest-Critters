@@ -19,7 +19,11 @@ ZFlesh/Throw	FODDATK
 ZFlesh/Miss		FODDMISS
 ZFlesh/Hit		FODDHIT
 
-
+$alias GibMonster/Sight  Babuin/sight
+$alias GibMonster/Active Babuin/active
+$alias GibMonster/Pain   Babuin/pain
+$alias GibMonster/Death  Babuin/death
+$alias GibMonster/Bite   Babuin/bite
 
 EvilSprite/See		BSKULSEE
 EvilSprite/Pain		BSKULPIN
