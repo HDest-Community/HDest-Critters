@@ -28,6 +28,9 @@ $alias GibMonster/Bite   Babuin/bite
 EvilSprite/See		BSKULSEE
 EvilSprite/Pain		BSKULPIN
 
+$alias EvilSprite/spit  Putto/spit
+$alias EvilSprite/death Putto/death
+
 Dog/Sight		DSDOGSEE
 Dog/Active		DSDOGIDL
 Dog/Pain		DSDOGPAN

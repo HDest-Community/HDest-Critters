@@ -2,12 +2,16 @@
 
 // Tags
 TAG_DOGGY         = "Doggy";
+TAG_EVILSPRITE    = "Evil Sprite";
 TAG_GIBMONSTER    = "Gib";
 TAG_WITHERED      = "Withered";
 
 // Obituaries
 OB_DOGGY          = "%o was mauled by a doggy.";
 OB_DOGGY_HIT      = "%o was mauled by a doggy.";
+
+OB_EVILSPRITE     = "%o got their teeth stolen";
+OB_EVILSPRITE_HIT = "%o got their teeth stolen";
 
 OB_GIBMONSTER     = "%o was chewed by a reanimated gib";
 OB_GIBMONSTER_HIT = "%o was chewed by a reanimated gib";
