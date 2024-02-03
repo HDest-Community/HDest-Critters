@@ -1,0 +1,5 @@
+[en default]
+
+TAG_DOGGY = "Doggy";
+
+OB_DOGGY = "%o was mauled by a doggy.";
