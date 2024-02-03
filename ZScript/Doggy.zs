@@ -22,19 +22,25 @@ class Doggy : Babuin {
 		//$Sprite "ROTTA2"
 
 		+cannotpush +pushable
-		health 50;
+		
 		translation "";
+		
+		health 50;
 		speed 18;
 		mass 60;
 		meleerange 50;
 		maxtargetrange 128;
 		painchance 128;
 		maxstepheight 32;maxdropoffheight 32;
+		
 		seesound "Dog/Sight";painsound "Dog/Pain";
 		deathsound "Dog/Death";activesound "Dog/Active";
-		obituary "$OB_DOGGY";
+		
 		damagefactor "hot",1.0;
+
 		tag "$TAG_DOGGY";
+		obituary "$OB_DOGGY";
+		hitobituary "$OB_DOGGY_HIT";
 	}
 
 	states

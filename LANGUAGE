@@ -1,5 +1,12 @@
 [en default]
 
-TAG_DOGGY = "Doggy";
+// Tags
+TAG_DOGGY       = "Doggy";
+TAG_WITHERED    = "Withered";
 
-OB_DOGGY = "%o was mauled by a doggy.";
+// Obituaries
+OB_DOGGY        = "%o was mauled by a doggy.";
+OB_DOGGY_HIT    = "%o was mauled by a doggy.";
+
+OB_WITHERED     = "%o brain got eaten by Zombie.";
+OB_WITHERED_HIT = "%o brain got eaten by Zombie.";

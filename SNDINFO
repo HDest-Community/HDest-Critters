@@ -12,7 +12,7 @@ $random ZombieFodder/Death { FODDERDIE1 FODDERDIE2 }
 FODDERDIE1	FODDDIE1
 FODDERDIE2	FODDDIE2
 
-ZombieFodder/Melee DSCLAW
+ZombieFodder/Melee  DSCLAW
 ZombieFodder/Soul	FODDSOUL
 
 ZFlesh/Throw	FODDATK
