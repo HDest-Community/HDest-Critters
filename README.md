@@ -1,3 +1,7 @@
+# Hideous Destructor Bestiary Expansion: Critters
+
+## Credits
+
 Code
 	most of the new code is based on MatthewTheGlutton's code for hideous destructor
 
