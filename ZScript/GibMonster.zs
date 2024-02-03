@@ -10,10 +10,8 @@ class GibMonster:HDMobBase{
 	override void postbeginplay(){
 		super.postbeginplay();
 		resize(0.9,1.1);
-		let hdmb=hdmobster(hdmobster.spawnmobster(self));
-		hdmb.meleethreshold=200;
+		self.meleethreshold=200;
 		lastpointinmap=pos;
-		bbiped=bplayingid;
 	}    
 	void A_GiblingSize () //this was surprisingly easy
     {

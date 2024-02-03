@@ -29,12 +29,6 @@ class Withered:HDMobBase{
 	}
 	override void postbeginplay(){
 		super.postbeginplay();
-		hdmobster.spawnmobster(self);
-		if(bplayingid){
-			bsmallhead=true;
-			bbiped=true;
-			A_SetSize(13,54);
-		}
 		resize(0.8,1.1);
 	}
 	virtual void A_ImpChase(){

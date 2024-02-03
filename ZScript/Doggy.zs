@@ -6,10 +6,8 @@ class Doggy:HDMobBase{
 	double latchforce;
 	override void postbeginplay(){
 		super.postbeginplay();
-		let hdmb=hdmobster(hdmobster.spawnmobster(self));
-		hdmb.meleethreshold=200;
+		self.meleethreshold=200;
 		lastpointinmap=pos;
-		bbiped=bplayingid;
 	}
 	void TryLatch(){
 		if(
