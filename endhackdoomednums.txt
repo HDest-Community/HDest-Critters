@@ -1,0 +1,7 @@
+DoomEdNums{
+	23401=Withered
+	23402=EvilSprite
+	23403=GibMonster
+	23404=Doggy
+}
+//NOTE TO SELF: HIGHEST DOOMEDNUM 32767
