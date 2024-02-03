@@ -6,10 +6,6 @@ class Doggy : Babuin {
 		self.meleethreshold=200;
 	}
 
-	action void A_CheckFreedoomSprite(){
-		// No-op
-	}
-
 	override void CheckFootStepSound(){
 		if (bplayingid)HDHumanoid.FootStepSound(self,0.4,drysound:"Dog/Step/Dry");
 		else if (!frame)A_StartSound("Dog/Step/Wet",88,CHANF_OVERLAP);
