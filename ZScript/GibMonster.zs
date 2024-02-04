@@ -6,7 +6,7 @@ class GibMonster : Babuin {
 	override void postbeginplay(){
 		super.postbeginplay();
 
-		self.meleethreshold = 200;
+		self.meleethreshold=200;
 	}
 
 	//this was surprisingly easy
