@@ -30,7 +30,7 @@ class GibMonster : Babuin {
 		//$Title "GibMonster"
 		//$Sprite "IMHDF1"
 
-		translation "";
+		translation 0;
 		
 		scale 1.0;
 		speed 8;

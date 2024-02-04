@@ -19,7 +19,7 @@ class Doggy : Babuin {
 
 		+cannotpush +pushable
 		
-		translation "";
+		translation 0;
 		
 		health 50;
 		speed 18;
