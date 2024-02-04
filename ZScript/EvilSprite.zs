@@ -34,7 +34,7 @@ class EvilSprite : HDMobBase {
 		deathsound "EvilSprite/death";
 
 		obituary "$OB_EVILSPRITE";
-		hitobituary "$OB_EVILSPRITE_HIT"
+		hitobituary "$OB_EVILSPRITE_HIT";
 	}
 
 	states
