@@ -3,7 +3,7 @@
 // Tags
 TAG_DOGGY         = "Doggy";
 TAG_EVILSPRITE    = "Evil Sprite";
-TAG_GIBMONSTER    = "Gib";
+TAG_GIBMONSTER    = "Gib Monster";
 TAG_WITHERED      = "Withered";
 
 // Obituaries
@@ -18,3 +18,56 @@ OB_GIBMONSTER_HIT = "%o was chewed by a reanimated gib";
 
 OB_WITHERED       = "%o brain got eaten by Zombie.";
 OB_WITHERED_HIT   = "%o brain got eaten by Zombie.";
+
+// Options Menu Titles
+CRITTERS_MENU                                       = "\c[Tan]ⓒ\c- Critters";
+MENU_MONSTERS_TITLE                                 = "--- Monsters ---";
+MENU_RESETOPTIONS_TITLE                             = "--- Reset Options ---";
+
+// Menu Section Headers
+MENU_SPAWNOPTIONS                                   = "Spawn Options";
+MENU_MONSPAWNOPTIONS                                = "Monster Spawn Options";
+MENU_PERSISTENCYOPTIONS                             = "Spawn Persistence Options";
+MENU_RESETOPTIONS                                   = "Reset Options";
+MENU_RESETALLOPTIONS                                = "Reset all Options";
+
+// Menu Static Text
+MENU_SPAWNRATE_TEXT1                                = "Setting 'spawn rate' to Replace All will suppress";
+MENU_SPAWNRATE_TEXT2                                = "spawns of that given type.";
+MENU_PERSISTENCY_TEXT                               = "Control whether replacements happen after a mapload:";
+
+// Menu Option Labels
+MENU_NOTICE                                         = "Notice:";
+MENU_SPAWNRATE                                      = "Spawn Rate: ";
+MENU_PERSISTENCY                                    = "Persistent Spawns: ";
+
+// Menu Command Text
+MENU_RESETMONSTER                                   = "Reset Monster Options";
+MENU_RESETPERSISTENCY                               = "Reset Persistence Options";
+CRITTERS_RESETALLOPTIONS                            = "Reset all options for HDest Critters";
+
+MENU_DOGGY_ZOMBIEMAN_SPAWNTEXT                      = "Control the rate that Doggies spawn on Zombiemen:";
+MENU_DOGGY_SHOTGUNGUY_SPAWNTEXT                     = "Control the rate that Doggies spawn on Shotgun Guys:";
+MENU_DOGGY_DEMON_SPAWNTEXT                          = "Control the rate that Doggies spawn on Demons:";
+
+MENU_EVILSPRITE_CASINGS_SPAWNTEXT                   = "Control the rate that Evil Sprites spawn on Spent Casings:";
+MENU_EVILSPRITE_GORE_SPAWNTEXT                      = "Control the rate that Evil Sprites spawn on Bits of Gore:";
+MENU_EVILSPRITE_DEADIMP_SPAWNTEXT                   = "Control the rate that Evil Sprites spawn on Dead Imps:";
+MENU_EVILSPRITE_DEADDEMON_SPAWNTEXT                 = "Control the rate that Evil Sprites spawn on Dead Demons:";
+
+MENU_GIBMONSTER_CASINGS_SPAWNTEXT                   = "Control the rate that Gib Monsters spawn on Spent Casings:";
+MENU_GIBMONSTER_GORE_SPAWNTEXT                      = "Control the rate that Gib Monsters spawn on Bits of Gore:";
+MENU_GIBMONSTER_DEADIMP_SPAWNTEXT                   = "Control the rate that Gib Monsters spawn on Dead Imps:";
+MENU_GIBMONSTER_DEADDEMON_SPAWNTEXT                 = "Control the rate that Gib Monsters spawn on Dead Demons:";
+MENU_GIBMONSTER_CYBERGIBS_SPAWNTEXT                 = "Control the rate that Gib Monsters spawn with Cyberdemon Gibs:";
+
+MENU_WITHERED_ZOMBIEMAN_SPAWNTEXT                   = "Control the rate that Withereds spawn on Zombiemen:";
+MENU_WITHERED_SHOTGUNGUY_SPAWNTEXT                  = "Control the rate that Withereds spawn on Shotgun Guys:";
+MENU_WITHERED_IMP_SPAWNTEXT                         = "Control the rate that Withereds spawn on Imps:";
+MENU_WITHERED_DEMON_SPAWNTEXT                       = "Control the rate that Withereds spawn on Demons:";
+MENU_WITHERED_CASINGS_SPAWNTEXT                     = "Control the rate that Withereds spawn on Spent Casings:";
+MENU_WITHERED_GORE_SPAWNTEXT                        = "Control the rate that Withereds spawn on Bits of Gore:";
+MENU_WITHERED_DEADZOMBIEMAN_SPAWNTEXT               = "Control the rate that Withereds spawn on Dead Zombiemen:";
+MENU_WITHERED_DEADSHOTGUNGUY_SPAWNTEXT              = "Control the rate that Withereds spawn on Dead Shotgun Guys:";
+MENU_WITHERED_DEADIMP_SPAWNTEXT                     = "Control the rate that Withereds spawn on Dead Imps:";
+MENU_WITHERED_DEADDEMON_SPAWNTEXT                   = "Control the rate that Withereds spawn on Dead Demons:";
