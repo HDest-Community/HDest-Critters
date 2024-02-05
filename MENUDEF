@@ -1,0 +1,220 @@
+// Spawn Bias (for enemies that replace)
+OptionValue "SpawnBias"
+{
+    -1,    "Disabled"
+    0,    "Replace All"
+    2,    "1 in 3"
+    4,    "1 in 5"
+    9,    "1 in 10"
+    14,   "1 in 15"
+    19,   "1 in 20"
+    24,   "1 in 25"
+    49,   "1 in 50"
+    99,   "1 in 100"
+    149,  "1 in 150"
+    199,  "1 in 200"
+}
+
+// Drop Bias (for items that don't replace). 
+OptionValue "DropBias"
+{
+	-1,    "Disabled"
+	 0,    "With All"
+	 2,    "1 in 3"
+	 4,    "1 in 5"
+	 9,    "1 in 10"
+	 14,   "1 in 15"
+	 19,   "1 in 20"
+	 24,   "1 in 25"
+	 49,   "1 in 50"
+	 99,   "1 in 100"
+	 149,  "1 in 150"
+	 199,  "1 in 200"
+}
+
+AddOptionMenu "OptionsMenu" {
+    Submenu "$CRITTERS_MENU", "CrittersMenu"
+}
+
+AddOptionMenu "HDAddonMenu" {
+    Submenu "$CRITTERS_MENU", "CrittersMenu"
+}
+
+
+OptionMenu CrittersMenu
+{
+    Title "$CRITTERS_MENU"
+
+    StaticText "$MENU_MONSTERS_TITLE", "Yellow"
+    StaticText ""
+    Submenu "$TAG_DOGGY", "Doggy", 0, 1
+    Submenu "$TAG_EVILSPRITE", "EvilSprite", 0, 1
+    Submenu "$TAG_GIBMONSTER", "GibMonster", 0, 1
+    Submenu "$TAG_WITHERED", "Withered", 0, 1
+    StaticText ""
+
+    StaticText "$MENU_RESETOPTIONS_TITLE", "red"
+    StaticText ""
+    SafeCommand "$CRITTERS_RESETALLOPTIONS", "Critters_Reset_Cvars"
+}
+
+
+OptionMenu Doggy
+{
+    Title "$TAG_DOGGY"
+
+    StaticText "$MENU_NOTICE", "Yellow"
+    StaticText "$MENU_SPAWNRATE_TEXT1", "White"
+    StaticText "$MENU_SPAWNRATE_TEXT2", "White"
+    StaticText ""
+
+    StaticText "$MENU_MONSPAWNOPTIONS", "Yellow"
+    StaticText "$MENU_DOGGY_ZOMBIEMAN_SPAWNTEXT", "White"
+    Option "$MENU_SPAWNRATE", "doggy_zombieman_spawn_bias", "SpawnBias"
+    SafeCommand "$MENU_RESETMONSTER", "resetcvar doggy_zombieman_spawn_bias"
+    StaticText "$MENU_DOGGY_SHOTGUNGUY_SPAWNTEXT", "White"
+    Option "$MENU_SPAWNRATE", "doggy_shotgunguy_spawn_bias", "SpawnBias"
+    SafeCommand "$MENU_RESETMONSTER", "resetcvar doggy_shotgunguy_spawn_bias"
+    StaticText "$MENU_DOGGY_DEMON_SPAWNTEXT", "White"
+    Option "$MENU_SPAWNRATE", "doggy_demon_spawn_bias", "SpawnBias"
+    SafeCommand "$MENU_RESETMONSTER", "resetcvar doggy_demon_spawn_bias"
+    StaticText ""
+
+    StaticText "$MENU_PERSISTENCYOPTIONS", "Yellow"
+    StaticText "$MENU_PERSISTENCY_TEXT", "White"
+    Option "$MENU_MONPERSISTENCY", "doggy_persistent_spawning", "OnOff"
+    SafeCommand "$MENU_RESETPERSISTENCY", "resetcvar doggy_persistent_spawning"
+    StaticText ""
+    StaticText ""
+
+    StaticText "$MENU_RESETOPTIONS", "Yellow"
+    SafeCommand "$MENU_RESETALLOPTIONS", "doggy_reset_cvars"
+}
+
+OptionMenu EvilSprite
+{
+    Title "$TAG_EVILSPRITE"
+
+    StaticText "$MENU_NOTICE", "Yellow"
+    StaticText "$MENU_SPAWNRATE_TEXT1", "White"
+    StaticText "$MENU_SPAWNRATE_TEXT2", "White"
+    StaticText ""
+
+    StaticText "$MENU_MONSPAWNOPTIONS", "Yellow"
+    StaticText "$MENU_EVILSPRITE_CASINGS_SPAWNTEXT", "White"
+    Option "$MENU_SPAWNRATE", "evilsprite_casings_spawn_bias", "SpawnBias"
+    SafeCommand "$MENU_RESETMONSTER", "resetcvar evilsprite_casings_spawn_bias"
+    StaticText "$MENU_EVILSPRITE_GORE_SPAWNTEXT", "White"
+    Option "$MENU_SPAWNRATE", "evilsprite_gore_spawn_bias", "SpawnBias"
+    SafeCommand "$MENU_RESETMONSTER", "resetcvar evilsprite_gore_spawn_bias"
+    StaticText "$MENU_EVILSPRITE_DEADIMP_SPAWNTEXT", "White"
+    Option "$MENU_SPAWNRATE", "evilsprite_deadimp_spawn_bias", "SpawnBias"
+    SafeCommand "$MENU_RESETMONSTER", "resetcvar evilsprite_deadimp_spawn_bias"
+    StaticText "$MENU_EVILSPRITE_DEADDEMON_SPAWNTEXT", "White"
+    Option "$MENU_SPAWNRATE", "evilsprite_deaddemon_spawn_bias", "SpawnBias"
+    SafeCommand "$MENU_RESETMONSTER", "resetcvar evilsprite_deaddemon_spawn_bias"
+    StaticText ""
+
+    StaticText "$MENU_PERSISTENCYOPTIONS", "Yellow"
+    StaticText "$MENU_PERSISTENCY_TEXT", "White"
+    Option "$MENU_MONPERSISTENCY", "evilsprite_persistent_spawning", "OnOff"
+    SafeCommand "$MENU_RESETPERSISTENCY", "resetcvar evilsprite_persistent_spawning"
+    StaticText ""
+    StaticText ""
+
+    StaticText "$MENU_RESETOPTIONS", "Yellow"
+    SafeCommand "$MENU_RESETALLOPTIONS", "evilsprite_reset_cvars"
+}
+
+OptionMenu GibMonster
+{
+    Title "$TAG_GIBMONSTER"
+
+    StaticText "$MENU_NOTICE", "Yellow"
+    StaticText "$MENU_SPAWNRATE_TEXT1", "White"
+    StaticText "$MENU_SPAWNRATE_TEXT2", "White"
+    StaticText ""
+
+    StaticText "$MENU_MONSPAWNOPTIONS", "Yellow"
+    StaticText "$MENU_GIBMONSTER_CASINGS_SPAWNTEXT", "White"
+    Option "$MENU_SPAWNRATE", "gibmonster_casings_spawn_bias", "SpawnBias"
+    SafeCommand "$MENU_RESETMONSTER", "resetcvar gibmonster_casings_spawn_bias"
+    StaticText "$MENU_GIBMONSTER_GORE_SPAWNTEXT", "White"
+    Option "$MENU_SPAWNRATE", "gibmonster_gore_spawn_bias", "SpawnBias"
+    SafeCommand "$MENU_RESETMONSTER", "resetcvar gibmonster_gore_spawn_bias"
+    StaticText "$MENU_GIBMONSTER_DEADIMP_SPAWNTEXT", "White"
+    Option "$MENU_SPAWNRATE", "gibmonster_deadimp_spawn_bias", "SpawnBias"
+    SafeCommand "$MENU_RESETMONSTER", "resetcvar gibmonster_deadimp_spawn_bias"
+    StaticText "$MENU_GIBMONSTER_DEADDEMON_SPAWNTEXT", "White"
+    Option "$MENU_SPAWNRATE", "gibmonster_deaddemon_spawn_bias", "SpawnBias"
+    SafeCommand "$MENU_RESETMONSTER", "resetcvar gibmonster_deaddemon_spawn_bias"
+    StaticText ""
+
+    StaticText "$MENU_GIBMONSTER_CYBERGIBS_SPAWNTEXT", "White"
+    Option "$MENU_SPAWNRATE", "gibmonster_cybergibs_spawn_bias", "DropBias"
+    SafeCommand "$MENU_RESETMONSTER", "resetcvar gibmonster_cybergibs_spawn_bias"
+    StaticText ""
+
+    StaticText "$MENU_PERSISTENCYOPTIONS", "Yellow"
+    StaticText "$MENU_PERSISTENCY_TEXT", "White"
+    Option "$MENU_MONPERSISTENCY", "gibmonster_persistent_spawning", "OnOff"
+    SafeCommand "$MENU_RESETPERSISTENCY", "resetcvar gibmonster_persistent_spawning"
+    StaticText ""
+    StaticText ""
+
+    StaticText "$MENU_RESETOPTIONS", "Yellow"
+    SafeCommand "$MENU_RESETALLOPTIONS", "gibmonster_reset_cvars"
+}
+
+OptionMenu Withered
+{
+    Title "$TAG_WITHERED"
+
+    StaticText "$MENU_NOTICE", "Yellow"
+    StaticText "$MENU_SPAWNRATE_TEXT1", "White"
+    StaticText "$MENU_SPAWNRATE_TEXT2", "White"
+    StaticText ""
+
+    StaticText "$MENU_MONSPAWNOPTIONS", "Yellow"
+    StaticText "$MENU_WITHERED_ZOMBIEMAN_SPAWNTEXT", "White"
+    Option "$MENU_SPAWNRATE", "withered_zombieman_spawn_bias", "SpawnBias"
+    SafeCommand "$MENU_RESETMONSTER", "resetcvar withered_zombieman_spawn_bias"
+    StaticText "$MENU_WITHERED_SHOTGUNGUY_SPAWNTEXT", "White"
+    Option "$MENU_SPAWNRATE", "withered_shotgunguy_spawn_bias", "SpawnBias"
+    SafeCommand "$MENU_RESETMONSTER", "resetcvar withered_shotgunguy_spawn_bias"
+    StaticText "$MENU_WITHERED_IMP_SPAWNTEXT", "White"
+    Option "$MENU_SPAWNRATE", "withered_imp_spawn_bias", "SpawnBias"
+    SafeCommand "$MENU_RESETMONSTER", "resetcvar withered_imp_spawn_bias"
+    StaticText "$MENU_WITHERED_DEMON_SPAWNTEXT", "White"
+    Option "$MENU_SPAWNRATE", "withered_demon_spawn_bias", "SpawnBias"
+    SafeCommand "$MENU_RESETMONSTER", "resetcvar withered_demon_spawn_bias"
+    StaticText "$MENU_WITHERED_CASINGS_SPAWNTEXT", "White"
+    Option "$MENU_SPAWNRATE", "withered_casings_spawn_bias", "SpawnBias"
+    SafeCommand "$MENU_RESETMONSTER", "resetcvar withered_casings_spawn_bias"
+    StaticText "$MENU_WITHERED_GORE_SPAWNTEXT", "White"
+    Option "$MENU_SPAWNRATE", "withered_gore_spawn_bias", "SpawnBias"
+    SafeCommand "$MENU_RESETMONSTER", "resetcvar withered_gore_spawn_bias"
+    StaticText "$MENU_WITHERED_DEADZOMBIEMAN_SPAWNTEXT", "White"
+    Option "$MENU_SPAWNRATE", "withered_deadzombieman_spawn_bias", "SpawnBias"
+    SafeCommand "$MENU_RESETMONSTER", "resetcvar withered_deadzombieman_spawn_bias"
+    StaticText "$MENU_WITHERED_DEADSHOTGUNGUY_SPAWNTEXT", "White"
+    Option "$MENU_SPAWNRATE", "withered_deadshotgunguy_spawn_bias", "SpawnBias"
+    SafeCommand "$MENU_RESETMONSTER", "resetcvar withered_deadshotgunguy_spawn_bias"
+    StaticText "$MENU_WITHERED_DEADIMP_SPAWNTEXT", "White"
+    Option "$MENU_SPAWNRATE", "withered_deadimp_spawn_bias", "SpawnBias"
+    SafeCommand "$MENU_RESETMONSTER", "resetcvar withered_deadimp_spawn_bias"
+    StaticText "$MENU_WITHERED_DEADDEMON_SPAWNTEXT", "White"
+    Option "$MENU_SPAWNRATE", "withered_deaddemon_spawn_bias", "SpawnBias"
+    SafeCommand "$MENU_RESETMONSTER", "resetcvar withered_deaddemon_spawn_bias"
+    StaticText ""
+
+    StaticText "$MENU_PERSISTENCYOPTIONS", "Yellow"
+    StaticText "$MENU_PERSISTENCY_TEXT", "White"
+    Option "$MENU_MONPERSISTENCY", "withered_persistent_spawning", "OnOff"
+    SafeCommand "$MENU_RESETPERSISTENCY", "resetcvar withered_persistent_spawning"
+    StaticText ""
+    StaticText ""
+
+    StaticText "$MENU_RESETOPTIONS", "Yellow"
+    SafeCommand "$MENU_RESETALLOPTIONS", "withered_reset_cvars"
+}

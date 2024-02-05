@@ -108,6 +108,7 @@ class CrittersHandler : EventHandler {
         // Doggies
         Array<CritterSpawnEnemyEntry> spawns_doggy;
         spawns_doggy.push(addEnemyEntry('Zombieman', doggy_zombieman_spawn_bias));
+        spawns_doggy.push(addEnemyEntry('ShotgunGuy', doggy_shotgunguy_spawn_bias));
         spawns_doggy.push(addEnemyEntry('Demon', doggy_demon_spawn_bias));
         addEnemy('Doggy', spawns_doggy, doggy_persistent_spawning);
 
@@ -129,12 +130,18 @@ class CrittersHandler : EventHandler {
 
         Array<CritterSpawnEnemyEntry> spawns_gibMonster_cyberGibs;
         spawns_gibMonster_cyberGibs.push(addEnemyEntry('CyberGibs', gibmonster_cybergibs_spawn_bias));
-        addEnemy('GibMonster', spawns_gibMonster_cyberGibs, true);
+        addEnemy('GibMonster', spawns_gibMonster_cyberGibs, true, false);
 
         // Withereds
         Array<CritterSpawnEnemyEntry> spawns_withereds;
+        spawns_withereds.push(addEnemyEntry('Zombieman', withered_zombieman_spawn_bias));
+        spawns_withereds.push(addEnemyEntry('ShotgunGuy', withered_shotgunguy_spawn_bias));
+        spawns_withereds.push(addEnemyEntry('DoomImp', withered_imp_spawn_bias));
+        spawns_withereds.push(addEnemyEntry('Demon', withered_demon_spawn_bias));
         spawns_withereds.push(addEnemyEntry('HDCasingBits', withered_casings_spawn_bias));
         spawns_withereds.push(addEnemyEntry('HDGoreBits', withered_gore_spawn_bias));
+        spawns_withereds.push(addEnemyEntry('DeadZombieman', withered_deadzombieman_spawn_bias));
+        spawns_withereds.push(addEnemyEntry('DeadShotgunGuy', withered_deadshotgunguy_spawn_bias));
         spawns_withereds.push(addEnemyEntry('DeadDoomImp', withered_deadimp_spawn_bias));
         spawns_withereds.push(addEnemyEntry('DeadDemon', withered_deaddemon_spawn_bias));
         addEnemy('Withered', spawns_withereds, withered_persistent_spawning);
