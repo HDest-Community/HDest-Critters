@@ -1,5 +1,7 @@
 # Hideous Destructor Bestiary Expansion: Critters
 
+[![Nightly Build](https://github.com/UndeadZeratul/HDest-Critters/actions/workflows/nightly.yml/badge.svg)](https://github.com/UndeadZeratul/HDest-Critters/actions/workflows/nightly.yml)
+
 ## Credits
 
 Code
