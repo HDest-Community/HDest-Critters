@@ -7,6 +7,7 @@ class Withered : Serpentipede {
 	override void postbeginplay() {
 		super.postbeginplay();
 
+		sprite = getspriteindex("ZFD"..random(1, 3));
 		resize(0.8, 1.1);
 	}
 
@@ -38,9 +39,12 @@ class Withered : Serpentipede {
 
 	states
 	{
+		prefetch:
+			ZFD1 A 0;
+			ZFD2 A 0;
+			ZFD3 A 0;
 		spawn:
-			ZFOD A 0;
-
+			ZFD1 A 0;
 		missile:
 		shoot:
 		lead:

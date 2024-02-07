@@ -10,7 +10,9 @@ Code
 Withered aka ZombieFodder  
 - Code: Horror Movie Guy, Ghastly (ZScript conversion)  
 - Sounds: id Software, Raven Software  
-- Sprites: Vader, Raven Software  
+- Brown Variant Sprites: Vader, Raven Software  
+- Dark Variant Sprites: Vader, Finalizer, Horror Movie Guy, Raven Software  
+- Black Variant Sprites: Vader, Finalizer, Horror Movie Guy, Raven Software  
 - Sprite Edit: Finalizer, Horror Movie Guy  
 - Idea Base: Classic movie zombie, Doom 4's "possessed" enemy, Quake's Zombie  
 	
