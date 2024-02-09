@@ -41,6 +41,7 @@ jobs:
           SUFFIX: ${{ steps.build-suffix.outputs.SUFFIX }}
       - uses: softprops/action-gh-release@v0.1.15
         env:
+          RELEASE_VERSION: ${{ env.RELEASE_VERSION }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           target_commitish: ${{ github.event.pull_request.merge_commit_sha }}
