@@ -4,6 +4,8 @@
 
 ## Credits
 
+Original Author: CoolKing1234 aka EndHackTheRogue
+
 Code
 - most of the new code is based on MatthewTheGlutton's code for hideous destructor
 
@@ -24,8 +26,7 @@ EvilSprite
 Doggies  
 - Sounds: id Software  
 - German Shepherd Sprites: id Software
-- Rottweiler Sprites: Laz Rojas, id Software
+- Blue Rottweiler Sprites: id Software
+- Gray Rottweiler Sprites: Laz Rojas, id Software
 - Zombie Jackal Sprites: Captain Toenail, id Software
 - Zombie Rottweiler Sprites: Captain Toenail, Laz Rojas, id Software  
-
-CoolKing1234 aka EndHackTheRogue glued all this stuff together  
