@@ -25,7 +25,7 @@ EvilSprite
 
 Doggies  
 - Sounds: id Software  
-- German Shepherd Sprites: id Software
+- German Shepherd Sprites: Sgt. Mark IV, id Software
 - Blue Rottweiler Sprites: id Software
 - Gray Rottweiler Sprites: Laz Rojas, id Software
 - Zombie Jackal Sprites: Captain Toenail, id Software
