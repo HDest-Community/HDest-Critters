@@ -2,7 +2,7 @@
 // Withered
 // ------------------------------------------------------------
 
-class Withered : Serpentipede {
+class Withered : FighterImp {
 
     override void postbeginplay() {
         super.postbeginplay();

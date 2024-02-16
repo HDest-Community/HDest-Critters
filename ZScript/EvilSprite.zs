@@ -96,7 +96,7 @@ class EvilSprite : HDMobBase {
 
 class SpriteBall:HDImpBall{
     default {
-        missiletype "ArdentipedeBallTail";
+        missiletype "HDImpBallTail";
         speed 6;
         scale 0.4;
     }
