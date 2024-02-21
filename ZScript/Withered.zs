@@ -43,6 +43,13 @@ class Withered : FighterImp {
             ZFD3 A 0;
         spawn:
             ZFD1 A 0;
+            goto idle;
+        melee:
+            #### EE 4 A_FaceLastTargetPos();
+            #### F 2;
+            #### G 8 A_FireballerScratch(null, random(10, 30), ballchance: 0);
+            #### F 4;
+            goto see;
         missile:
         shoot:
         lead:
