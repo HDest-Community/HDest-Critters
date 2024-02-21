@@ -12,7 +12,15 @@ class Withered : FighterImp {
     }
 
     override void deathdrop() {
-        if (!bfriendly) A_DropItem("HDSpent7mmSpawner", -1, 40);
+        if (!bfriendly && !bhasdropped) {
+            bhasdropped = true;
+
+            if (!random(0, 6)) {
+                for (int i = 0; i < 9; i++) {
+                    DropNewItem("HDCasingBits", 200);
+                }
+            }
+        }
     }
 
     default {
@@ -58,13 +66,5 @@ class Withered : FighterImp {
         coverdecide:
         hork:
             goto see;
-    }
-}
-
-class HDSpent7mmSpawner : Actor {
-    States {
-        Spawn:
-            ZFOD AAAAAAAAA 0 A_DropItem("HDSpent7mm", -1, 200);
-            stop;
     }
 }
