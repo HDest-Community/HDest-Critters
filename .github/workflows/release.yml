@@ -39,16 +39,18 @@ jobs:
       - uses: ./.github/workflows/build-pk3
         env:
           SUFFIX: ${{ steps.build-suffix.outputs.SUFFIX }}
-      - uses: softprops/action-gh-release@v0.1.15
+
+      # Create Release
+      - name: Create Release
+        uses: ncipollo/release-action@v1.14.0
         env:
           RELEASE_VERSION: ${{ env.RELEASE_VERSION }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          target_commitish: ${{ github.event.pull_request.merge_commit_sha }}
-          tag_name: ${{ env.RELEASE_VERSION }}
-          name: ${{ env.RELEASE_VERSION }}
+          artifact: ./*.pk3
+          discussionCategory: 'Releases'
           draft: false
+          generateReleaseNotes: true
           prerelease: false
-          generate_release_notes: true
-          discussion_category_name: 'Releases'
-          files: ./*.pk3
+          tag: ${{ env.RELEASE_VERSION }}
+          token: ${{ env.GITHUB_TOKEN }}
