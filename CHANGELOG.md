@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   New per-monster `SNDINFO` entries have been added.
 -   Monster Tags & Obituaries have been localized.
 -   Monsters now properly use `A_HDLook` and `A_HDChase`.
+-   Update Build Scripts.
 
 ## [v0.0.2]
 
