@@ -34,8 +34,10 @@ jobs:
       # Build & Publish PK3
       - uses: actions/checkout@v4
       - id: build-suffix
+        env:
+          RELEASE_VERSION: ${{ env.RELEASE_VERSION }}
         shell: bash
-        run: echo "SUFFIX=${{ github.ref_name }}" >> "$GITHUB_OUTPUT"
+        run: echo "SUFFIX=${{ env.RELEASE_VERSION }}" >> "$GITHUB_OUTPUT"
       - uses: ./.github/workflows/build-pk3
         env:
           SUFFIX: ${{ steps.build-suffix.outputs.SUFFIX }}
