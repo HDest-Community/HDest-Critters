@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v0.1.0] - 2024-02-23
+
 ### Added
 
 -   New Doggy Variants!  Now in all sorts of fun colors!
@@ -34,6 +36,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Initial Release.
 
 [Unreleased]: https://github.com/HDest-Community/HDest-Critters/compare/v0.1.0...HEAD
+
+[v0.1.0]: https://github.com/HDest-Community/HDest-Critters/compare/v0.0.2...v0.1.0
 
 [v0.1.0]: https://github.com/HDest-Community/HDest-Critters/compare/v0.0.2...v0.1.0
 
