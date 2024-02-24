@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+-   Added new Impaled Zombiemen Mimics.  Don't get too close, that impaled corpse might still have some fight left in it.
+
 ## [v0.1.0] - 2024-02-23
 
 ### Added

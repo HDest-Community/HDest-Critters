@@ -50,6 +50,7 @@ OptionMenu CrittersMenu
     Submenu "$TAG_DOGGY", "Doggy", 0, 1
     Submenu "$TAG_EVILSPRITE", "EvilSprite", 0, 1
     Submenu "$TAG_GIBMONSTER", "GibMonster", 0, 1
+    Submenu "$TAG_STILLALIVE", "StillAlive", 0, 1
     Submenu "$TAG_WITHERED", "Withered", 0, 1
     StaticText ""
 
@@ -164,6 +165,32 @@ OptionMenu GibMonster
 
     StaticText "$MENU_RESETOPTIONS", "Yellow"
     SafeCommand "$MENU_RESETALLOPTIONS", "gibmonster_reset_cvars"
+}
+
+OptionMenu StillAlive
+{
+    Title "$TAG_STILLALIVE"
+
+    StaticText "$MENU_NOTICE", "Yellow"
+    StaticText "$MENU_SPAWNRATE_TEXT1", "White"
+    StaticText "$MENU_SPAWNRATE_TEXT2", "White"
+    StaticText ""
+
+    StaticText "$MENU_MONSPAWNOPTIONS", "Yellow"
+    StaticText "$MENU_STILLALIVE_SPAWNTEXT", "White"
+    Option "$MENU_SPAWNRATE", "stillalive_spawn_bias", "SpawnBias"
+    SafeCommand "$MENU_RESETMONSTER", "resetcvar stillalive_spawn_bias"
+    StaticText ""
+
+    StaticText "$MENU_PERSISTENCYOPTIONS", "Yellow"
+    StaticText "$MENU_PERSISTENCY_TEXT", "White"
+    Option "$MENU_MONPERSISTENCY", "stillalive_persistent_spawning", "OnOff"
+    SafeCommand "$MENU_RESETPERSISTENCY", "resetcvar stillalive_persistent_spawning"
+    StaticText ""
+    StaticText ""
+
+    StaticText "$MENU_RESETOPTIONS", "Yellow"
+    SafeCommand "$MENU_RESETALLOPTIONS", "stillalive_reset_cvars"
 }
 
 OptionMenu Withered

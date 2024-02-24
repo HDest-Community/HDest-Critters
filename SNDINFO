@@ -39,3 +39,8 @@ Dog/Death		DSDOGDIE
 
 $alias Dog/Step/Dry Babuin/step
 $alias Dog/Step/Wet Babuin/wormstep
+
+$alias stillAlive/sight  grunt/sight
+$alias stillAlive/active grunt/active
+$alias stillAlive/pain   grunt/pain
+$alias stillAlive/death  grunt/death

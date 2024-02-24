@@ -132,6 +132,11 @@ class CrittersHandler : EventHandler {
         spawns_gibMonster_cyberGibs.push(addEnemyEntry('CyberGibs', gibmonster_cybergibs_spawn_bias));
         addEnemy('GibMonster', spawns_gibMonster_cyberGibs, true, false);
 
+        // Still Alive Stick
+        Array<CritterSpawnEnemyEntry> spawns_stillAlive;
+        spawns_stillAlive.push(addEnemyEntry('LiveStick', stillalive_spawn_bias));
+        addEnemy('StillAliveStick', spawns_stillAlive, stillalive_persistent_spawning);
+
         // Withereds
         Array<CritterSpawnEnemyEntry> spawns_withereds;
         spawns_withereds.push(addEnemyEntry('Zombieman', withered_zombieman_spawn_bias));

@@ -15,6 +15,9 @@ Withered
 - Dark Variant Sprites: Vader, Finalizer, Horror Movie Guy, Raven Software  
 - Black Variant Sprites: Vader, Finalizer, Horror Movie Guy, Raven Software  
 
+Impaled Zombiemen
+- Sprites: Orka, id Software
+
 Gib Monster
 - Sounds: id Software
 - Sprites: Neoworm, Lobotomy Software, id Software
