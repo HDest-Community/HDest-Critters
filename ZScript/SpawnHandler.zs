@@ -110,7 +110,7 @@ class CrittersHandler : EventHandler {
         spawns_doggy.push(addEnemyEntry('Zombieman', doggy_zombieman_spawn_bias));
         spawns_doggy.push(addEnemyEntry('ShotgunGuy', doggy_shotgunguy_spawn_bias));
         spawns_doggy.push(addEnemyEntry('Demon', doggy_demon_spawn_bias));
-        addEnemy('Doggy', spawns_doggy, doggy_persistent_spawning);
+        addEnemy('DoggySpawner', spawns_doggy, doggy_persistent_spawning);
 
         // Evil Sprites
         Array<CritterSpawnEnemyEntry> spawns_evilSprite;
@@ -149,7 +149,7 @@ class CrittersHandler : EventHandler {
         spawns_withereds.push(addEnemyEntry('DeadShotgunGuy', withered_deadshotgunguy_spawn_bias));
         spawns_withereds.push(addEnemyEntry('DeadDoomImp', withered_deadimp_spawn_bias));
         spawns_withereds.push(addEnemyEntry('DeadDemon', withered_deaddemon_spawn_bias));
-        addEnemy('Withered', spawns_withereds, withered_persistent_spawning);
+        addEnemy('WitheredSpawner', spawns_withereds, withered_persistent_spawning);
     }
 
     // Random stuff, stores it and forces negative values just to be 0.
