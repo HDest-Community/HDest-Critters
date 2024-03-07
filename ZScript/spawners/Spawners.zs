@@ -7,7 +7,14 @@ class DoggySpawner : IdleDummy {
         super.PostBeginPlay();
 
         angle = random(1, 360);
-        maxSpawns = random(1, 3);
+        
+        let i = random();
+        for (let j = 8; j >= 0; j--) {
+            if (i >> j) {
+                maxSpawns = 8 - j;
+                break;
+            }
+        }
     }
 
     action void A_SpawnDoggies(int dist) {
@@ -39,7 +46,14 @@ class WitheredSpawner : IdleDummy {
         super.PostBeginPlay();
 
         angle = random(1, 360);
-        maxSpawns = random(1, 3);
+        
+        let i = random();
+        for (let j = 8; j >= 0; j--) {
+            if (i >> j) {
+                maxSpawns = 8 - j;
+                break;
+            }
+        }
     }
 
     action void A_SpawnWithereds(int dist) {
