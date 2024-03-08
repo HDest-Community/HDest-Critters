@@ -18,14 +18,26 @@ class DoggySpawner : IdleDummy {
     }
 
     action void A_SpawnDoggies(int dist) {
-        while(invoker.numSpawned < invoker.maxSpawns) {
-            let spawnAngle = (invoker.numSpawned % invoker.maxSpawns) * (360 / invoker.maxSpawns) + angle;
-            
-            if (hd_debug) console.printf("Spawning Doggy #"..(invoker.numSpawned + 1).." of "..invoker.maxSpawns.." with angle="..spawnAngle.." & dist="..dist);
-            
-            let offs = AngleToVector(spawnAngle, dist);
-            Spawn('Doggy', pos + offs);
-            invoker.numSpawned++;
+        let failedAttempts = 0;
+
+        while(invoker.numSpawned < invoker.maxSpawns && failedAttempts < 10) {
+
+            // Pick a random spot around origin to spawn
+            let spawnPos = Vec3Offset(FRandom(-64, 64), FRandom(-64, 64), 0);
+
+            if (hd_debug) Console.PrintF("Attempt #"..(failedAttempts + 1).." to sapwn Doggy #"..(invoker.numSpawned + 1).." of "..invoker.maxSpawns.." with offsets="..spawnPos);
+
+            // Try to spawn the mob.  If it failed to spawn, or spawned outside of the level, or spawned stuck, remove it and try again.
+            let spawned = Spawn('Doggy', spawnPos);
+            if (!spawned || !Level.IsPointInLevel(spawned.pos) || !spawned.TestMobjLocation()) {
+                spawned.Destroy();
+                failedAttempts++;
+
+                if (hd_debug) Console.PrintF("Failed to spawn Doggy #"..invoker.numSpawned..", retrying");
+            } else {
+                invoker.numSpawned++;
+                failedAttempts = 0;
+            }
         }
     }
 
@@ -57,17 +69,28 @@ class WitheredSpawner : IdleDummy {
     }
 
     action void A_SpawnWithereds(int dist) {
-        while(invoker.numSpawned < invoker.maxSpawns) {
-            let spawnAngle = (invoker.numSpawned % invoker.maxSpawns) * (360 / invoker.maxSpawns) + angle;
-            
-            if (hd_debug) console.printf("Spawning Withered #"..(invoker.numSpawned + 1).." of "..invoker.maxSpawns.." with angle="..spawnAngle.." & dist="..dist);
-            
-            let offs = AngleToVector(spawnAngle, dist);
-            Spawn('Withered', pos + offs);
-            invoker.numSpawned++;
+        let failedAttempts = 0;
+
+        while(invoker.numSpawned < invoker.maxSpawns && failedAttempts < 10) {
+
+            // Pick a random spot around origin to spawn
+            let spawnPos = Vec3Offset(FRandom(-64, 64), FRandom(-64, 64), 0);
+
+            if (hd_debug) Console.PrintF("Attempt #"..(failedAttempts + 1).." to sapwn Withered #"..(invoker.numSpawned + 1).." of "..invoker.maxSpawns.." with offsets="..spawnPos);
+
+            // Try to spawn the mob.  If it failed to spawn, or spawned outside of the level, or spawned stuck, remove it and try again.
+            let spawned = Spawn('Withered', spawnPos);
+            if (!spawned || !Level.IsPointInLevel(spawned.pos) || !spawned.TestMobjLocation()) {
+                spawned.Destroy();
+                failedAttempts++;
+
+                if (hd_debug) Console.PrintF("Failed to spawn Withered #"..invoker.numSpawned..", retrying");
+            } else {
+                invoker.numSpawned++;
+                failedAttempts = 0;
+            }
         }
     }
-
 
     states {
         spawn:
