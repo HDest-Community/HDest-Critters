@@ -25,7 +25,7 @@ class DoggySpawner : IdleDummy {
             // Pick a random spot around origin to spawn
             let spawnPos = Vec3Offset(FRandom(-64, 64), FRandom(-64, 64), 0);
 
-            if (hd_debug) Console.PrintF("Attempt #"..(failedAttempts + 1).." to sapwn Doggy #"..(invoker.numSpawned + 1).." of "..invoker.maxSpawns.." with offsets="..spawnPos);
+            if (hd_debug) Console.PrintF("Attempt #"..(failedAttempts + 1).." to sapwn Doggy #"..(invoker.numSpawned + 1).." of "..invoker.maxSpawns.." at pos="..spawnPos);
 
             // Try to spawn the mob.  If it failed to spawn, or spawned outside of the level, or spawned stuck, remove it and try again.
             let spawned = Spawn('Doggy', spawnPos);
@@ -76,7 +76,7 @@ class WitheredSpawner : IdleDummy {
             // Pick a random spot around origin to spawn
             let spawnPos = Vec3Offset(FRandom(-64, 64), FRandom(-64, 64), 0);
 
-            if (hd_debug) Console.PrintF("Attempt #"..(failedAttempts + 1).." to sapwn Withered #"..(invoker.numSpawned + 1).." of "..invoker.maxSpawns.." with offsets="..spawnPos);
+            if (hd_debug) Console.PrintF("Attempt #"..(failedAttempts + 1).." to sapwn Withered #"..(invoker.numSpawned + 1).." of "..invoker.maxSpawns.." at pos="..spawnPos);
 
             // Try to spawn the mob.  If it failed to spawn, or spawned outside of the level, or spawned stuck, remove it and try again.
             let spawned = Spawn('Withered', spawnPos);
