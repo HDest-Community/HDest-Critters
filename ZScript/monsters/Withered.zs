@@ -23,6 +23,16 @@ class Withered : FighterImp {
         }
     }
 
+    action void A_Lunge() {
+        A_FaceTarget(16, 16);
+        bnodropoff = false;
+        A_Changevelocity(1, 0, 0, CVF_RELATIVE);
+        if (A_JumpIfTargetInLOS("null", 20, 0, 128)) {
+            invoker.A_Vocalize(seesound);
+            SetStateLabel("jump");
+        }
+    }
+
     default {
         //$Category "Monsters/Hideous Destructor"
         //$Title "Withered"
@@ -31,6 +41,7 @@ class Withered : FighterImp {
         mass 75;
         health 50;
         gibhealth 100;
+        meleerange 40;
 
         SeeSound "ZombieFodder/Sight";
         PainSound "ZombieFodder/Pain";
@@ -60,6 +71,15 @@ class Withered : FighterImp {
             #### F 4;
             goto see;
         missile:
+            #### ABCD 2 A_Lunge();
+            goto see;
+        jump:
+            #### E 3 A_FaceTarget(16, 16);
+            #### F 3 A_Changevelocity(cos(pitch) * 2, 0, sin(-pitch) * 2, CVF_RELATIVE);
+            #### G 2 A_FaceTarget(6, 6, FAF_TOP);
+            #### F 1 A_ChangeVelocity(cos(pitch) * 8, 0, sin(-pitch - frandom(-4, 1)) * 8, CVF_RELATIVE);
+            #### ABCD 2 A_HDChase();
+            goto missile;
         shoot:
         lead:
         spam:
@@ -100,12 +120,16 @@ class WitheredSummoner : Withered {
 
     states {
         missile:
+            #### # 0 A_JumpIf(health < random(0, 30), 1);
+            goto super::missile;
+            #### # 0 { bnopain = true; }
             #### # 0 A_JumpIf(summoned || !(target is 'HDPlayerPawn'), 'see');
             #### V 8 A_FaceLastTargetPos();
             #### # 0 A_Vocalize("ZombieFodder/Summon");
             #### W 3 A_FaceLastTargetPos();
             #### XYXYXYXYXYXYXYXYXYXYXYXYXYXYXYXYXYXYXYXYXYXYXYXYXYXYXYXYXYXYXYXYXYXYXY 1 A_FaceLastTargetPos();
             #### # 0 A_SummonWithereds();
+            #### # 0 { bnopain = default.bnopain; }
             #### WV 7 A_FaceLastTargetPos();
             goto see;
     }
