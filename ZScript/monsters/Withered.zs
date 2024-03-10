@@ -120,10 +120,9 @@ class WitheredSummoner : Withered {
 
     states {
         missile:
-            #### # 0 A_JumpIf(health < random(0, 30), 1);
+            #### # 0 A_JumpIf(!summoned && target is 'HDPlayerPawn' && health < random(0, 30), 1);
             goto super::missile;
             #### # 0 { bnopain = true; }
-            #### # 0 A_JumpIf(summoned || !(target is 'HDPlayerPawn'), 'see');
             #### V 8 A_FaceLastTargetPos();
             #### # 0 A_Vocalize("ZombieFodder/Summon");
             #### W 3 A_FaceLastTargetPos();
