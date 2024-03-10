@@ -74,10 +74,13 @@ class StillAliveStick : UndeadHomeboy {
             #### # 8 A_HDReload();
             goto see;
         death:
+        xdeath:
+        xxxdeath:
             #### F 8 A_Scream();
             #### G 8;
         deathend:
         dead:
+        xdead:
         death.spawndead:
             #### H 8 canraise;
             loop;
