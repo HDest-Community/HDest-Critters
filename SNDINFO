@@ -15,6 +15,9 @@ FODDERDIE2	FODDDIE2
 ZombieFodder/Melee  DSCLAW
 ZombieFodder/Soul	FODDSOUL
 
+ZombieFodder/Summon FODDSUMM
+$rolloff Afflicted/ScreechSummon 650 2800
+
 ZFlesh/Throw	FODDATK
 ZFlesh/Miss		FODDMISS
 ZFlesh/Hit		FODDHIT
