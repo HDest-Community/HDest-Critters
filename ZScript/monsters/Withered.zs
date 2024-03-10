@@ -170,7 +170,7 @@ Class WitheredSummonerSeeker : Actor {
     states {
         Spawn:
             TNT1 A 1 A_Chase();
-            TNT1 A 0 A_CheckSight("SpawnLoop");
+            TNT1 A 0 A_Jump(15, "SpawnLoop");
             loop;
         SpawnLoop:
             TNT1 A 10 A_Wander();
