@@ -101,7 +101,7 @@ class WitheredSpawner : IdleDummy {
 
 class WitheredRandom : RandomSpawner {
     default {
-        DropItem 'Withered', 256, 30;
+        DropItem 'Withered', 256, 19;
         DropItem 'WitheredSummoner', 256, 1;
     }
 }
