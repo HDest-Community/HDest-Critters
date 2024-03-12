@@ -81,7 +81,8 @@ class WitheredSpawner : IdleDummy {
             // Try to spawn the mob.  If it failed to spawn, or spawned outside of the level, or spawned stuck, remove it and try again.
             let spawned = Spawn('WitheredRandom', spawnPos);
             if (!spawned || !Level.IsPointInLevel(spawned.pos) || !spawned.TestMobjLocation()) {
-                spawned.Destroy();
+                if (spawned) spawned.Destroy();
+
                 failedAttempts++;
 
                 if (hd_debug) Console.PrintF("Failed to spawn Withered #"..invoker.numSpawned..", retrying");
