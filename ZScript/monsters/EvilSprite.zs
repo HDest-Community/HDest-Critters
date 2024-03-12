@@ -127,12 +127,10 @@ class SpriteComet : HDFireBall {
             TNT1 A 0 {
                 if (blockingmobj) {
                     A_Immolate(blockingmobj, target, 80);
-                    // damagemobj(self, target, max(1, dmg >> 2), "bashing");
                 }
             }
             COMT DEFGHI 1 bright A_SpawnItemEx("HDSmoke", flags: SXF_NOCHECKPOSITION);
             stop;
-            // goto super::death;
     }
 }
 
