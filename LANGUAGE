@@ -54,6 +54,7 @@ MENU_DOGGY_ZOMBIEMAN_SPAWNTEXT                      = "Control the rate that Dog
 MENU_DOGGY_SHOTGUNGUY_SPAWNTEXT                     = "Control the rate that Doggies spawn on Shotgun Guys:";
 MENU_DOGGY_DEMON_SPAWNTEXT                          = "Control the rate that Doggies spawn on Demons:";
 
+MENU_EVILSPRITE_LOSTSOUL_SPAWNTEXT                  = "Control the rate that Evil Sprites spawn on Lost Souls:";
 MENU_EVILSPRITE_CASINGS_SPAWNTEXT                   = "Control the rate that Evil Sprites spawn on Spent Casings:";
 MENU_EVILSPRITE_GORE_SPAWNTEXT                      = "Control the rate that Evil Sprites spawn on Bits of Gore:";
 MENU_EVILSPRITE_DEADIMP_SPAWNTEXT                   = "Control the rate that Evil Sprites spawn on Dead Imps:";

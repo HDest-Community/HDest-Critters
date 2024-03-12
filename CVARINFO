@@ -5,6 +5,7 @@ server int  doggy_shotgunguy_spawn_bias        = 49;
 server int  doggy_demon_spawn_bias             = 24;
 server bool doggy_persistent_spawning          = false;
 
+server int  evilsprite_lostsoul_spawn_bias     = 14;
 server int  evilsprite_casings_spawn_bias      = 4;
 server int  evilsprite_gore_spawn_bias         = 99;
 server int  evilsprite_deadimp_spawn_bias      = 14;

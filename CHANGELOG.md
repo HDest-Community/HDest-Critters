@@ -10,6 +10,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 -   Added new Impaled Zombiemen Mimics.  Don't get too close, that impaled corpse might still have some fight left in it.
+-   Added new Withered Summoner variant!  Don't get too careless, lest a horde of the undead be upon ye!
+-   Added "Clustered" spawning for Doggies as well as Withereds.  can spawn between 1 and 8 of their respective monsters, with each additional monster spawning half as often as the previous.
+
+### Changed
+
+-   Updated Evil Sprite to include a second fireball attack, use the new FireballerScratch method, and now come packaged with brightmaps as well as dynamic lighting effects!
 
 ## [v0.1.0] - 2024-02-23
 

@@ -1,0 +1,45 @@
+object EvilSprite {
+	frame FRIT { light HDIMPBALL }
+	frame FRITI { light HDIMPBX1 }
+	frame FRITJ { light HDIMPBX1 }
+	frame FRITK { light HDIMPBX1 }
+	frame FRITL { light HDIMPBX2 }
+	frame FRITM { light HDIMPBX2 }
+	frame FRITN { light HDIMPBX2 }
+	frame FRITO { light HDIMPBX3 }
+	frame FRITP { light HDIMPBX3 }
+	frame FRITQ { light HDIMPBX3 }
+	frame FRITR { light HDIMPBX3 }
+}
+
+object SpriteBall {
+    frame FRTMA { light HDIMPBALL }
+    frame FRTMB { light HDIMPBALL }
+    frame FRTMC { light HDIMPBX1 }
+    frame FRTMD { light HDIMPBX2 }
+    frame FRTME { light HDIMPBX3 }
+}
+
+object SpriteComet {
+    frame FRTMA { light HDIMPBALL }
+    frame FRTMB { light HDIMPBALL }
+    frame FRTMC { light HDIMPBALL }
+    frame FRTMD { light HDIMPBX1 }
+    frame FRTME { light HDIMPBX1 }
+    frame FRTMF { light HDIMPBX2 }
+    frame FRTMG { light HDIMPBX2 }
+    frame FRTMH { light HDIMPBX3 }
+    frame FRTMI { light HDIMPBX3 }
+}
+
+object SpriteCometTail {
+    frame FRTBA { light HDIMPBX1 }
+    frame FRTBB { light HDIMPBX1 }
+    frame FRTBC { light HDIMPBX1 }
+    frame FRTBD { light HDIMPBX2 }
+    frame FRTBE { light HDIMPBX2 }
+    frame FRTBF { light HDIMPBX2 }
+    frame FRTBG { light HDIMPBX3 }
+    frame FRTBH { light HDIMPBX3 }
+    frame FRTBI { light HDIMPBX3 }
+}

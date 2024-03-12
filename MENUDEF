@@ -102,6 +102,9 @@ OptionMenu EvilSprite
     StaticText ""
 
     StaticText "$MENU_MONSPAWNOPTIONS", "Yellow"
+    StaticText "$MENU_EVILSPRITE_LOSTSOUL_SPAWNTEXT", "White"
+    Option "$MENU_SPAWNRATE", "evilsprite_lostsoul_spawn_bias", "SpawnBias"
+    SafeCommand "$MENU_RESETMONSTER", "resetcvar evilsprite_lostsoul_spawn_bias"
     StaticText "$MENU_EVILSPRITE_CASINGS_SPAWNTEXT", "White"
     Option "$MENU_SPAWNRATE", "evilsprite_casings_spawn_bias", "SpawnBias"
     SafeCommand "$MENU_RESETMONSTER", "resetcvar evilsprite_casings_spawn_bias"

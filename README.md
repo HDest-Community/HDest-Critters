@@ -22,7 +22,7 @@ Gib Monster
 - Sounds: id Software
 - Sprites: Neoworm, Lobotomy Software, id Software
 	
-EvilSprite
+Evil Sprite
 - Sounds: id Software, 3DRealms, Rogue Entertainment  
 - Sprites: Espi, Ebola, id Software  
 

@@ -114,6 +114,7 @@ class CrittersHandler : EventHandler {
 
         // Evil Sprites
         Array<CritterSpawnEnemyEntry> spawns_evilSprite;
+        spawns_evilSprite.push(addEnemyEntry('LostSoul', evilsprite_lostsoul_spawn_bias));
         spawns_evilSprite.push(addEnemyEntry('HDCasingBits', evilsprite_casings_spawn_bias));
         spawns_evilSprite.push(addEnemyEntry('HDGoreBits', evilsprite_gore_spawn_bias));
         spawns_evilSprite.push(addEnemyEntry('DeadDoomImp', evilsprite_deadimp_spawn_bias));
