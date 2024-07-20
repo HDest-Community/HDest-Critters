@@ -1,14 +1,14 @@
 version "4.11"
 
 // Monsters
-#include "zscript/monsters/Doggy.zs"
-#include "zscript/monsters/EvilSprite.zs"
-#include "zscript/monsters/GibMonster.zs"
-#include "zscript/monsters/StillAlive.zs"
-#include "zscript/monsters/Withered.zs"
+#include "zscript/CoolKing1234/critters/monsters/Doggy.zs"
+#include "zscript/CoolKing1234/critters/monsters/EvilSprite.zs"
+#include "zscript/CoolKing1234/critters/monsters/GibMonster.zs"
+#include "zscript/CoolKing1234/critters/monsters/StillAlive.zs"
+#include "zscript/CoolKing1234/critters/monsters/Withered.zs"
 
 // Spawners
-#include "zscript/spawners/Spawners.zs"
+#include "zscript/CoolKing1234/critters/Spawners.zs"
 
 // Spawn Handler
-#include "zscript/SpawnHandler.zs"
+#include "zscript/CoolKing1234/critters/SpawnHandler.zs"
