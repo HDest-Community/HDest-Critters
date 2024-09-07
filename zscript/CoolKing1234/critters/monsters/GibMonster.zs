@@ -84,15 +84,15 @@ class GibMonster : Babuin {
             TROO PO 4;
             IMHD A 0 A_GiblingSize();
             #### A 0 A_Jump(256,"see");
-        xdeath:
+        gib:
             TROO O 0 A_XScream();
-            TROO OPQ 4{spawn("MegaBloodSplatter",pos+(0,0,34),ALLOW_REPLACE);}
+            TROO OPQ 4 A_GibSplatter();
             TROO RST 4;
-            goto xdead;
-        xxxdeath:
+            goto gibbed;
+        deadgib:
             TROO O 4 A_XScream();
             TROO PQRST 4;
-        xdead:
+        gibbed:
             TROO U 5 canraise;
             loop;
     }

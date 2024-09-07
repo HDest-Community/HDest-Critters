@@ -100,17 +100,15 @@ class Doggy : Babuin {
             #### LKJ 6;
             #### IH 4;
 			goto see;
-        xdeath:
+        gib:
             #### H 0 A_XScream();
-            #### HIJ 4{
-				spawn("MegaBloodSplatter", pos + (0, 0, 34), ALLOW_REPLACE);
-			}
+            #### HIJ 4 A_GibSplatter();
             #### KLM 4;
-            goto xdead;
-        xxxdeath:
+            goto gibbed;
+        deadgib:
             #### H 4 A_XScream();
             #### IJKLM 4;
-        xdead:
+        gibbed:
             #### N 5 canraise;
             loop;
     }
