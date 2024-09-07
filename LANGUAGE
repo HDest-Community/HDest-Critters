@@ -78,6 +78,7 @@ MENU_GIBMONSTER_CYBERGIBS_SPAWNTEXT    = "Control the rate that Gib Monsters spa
 
 MENU_RAT_SPAWNTEXT                     = "Control the rate that Impaled Zombiemen spawn with corpses:";
 
+MENU_STILLALIVE_SPAWNTEXT              = "Control the rate that Impaled Zombiemen spawn on Impaled Corpses:";
 
 MENU_WITHERED_ZOMBIEMAN_SPAWNTEXT      = "Control the rate that Withereds spawn on Zombiemen:";
 MENU_WITHERED_SHOTGUNGUY_SPAWNTEXT     = "Control the rate that Withereds spawn on Shotgun Guys:";
