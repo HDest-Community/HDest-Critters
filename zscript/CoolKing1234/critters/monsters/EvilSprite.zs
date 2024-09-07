@@ -13,6 +13,7 @@ class EvilSprite : HDMobBase {
         +pushable +dontfall +cannotpush +thruspecies
         +hdmobbase.doesntbleed
         -telestomp -solid
+        +dontgib
 
         species "BaronOfHell";
         tag "$TAG_EVILSPRITE";
@@ -70,7 +71,8 @@ class EvilSprite : HDMobBase {
             #### ABCD 2 bright A_FastChase();
             #### ABCD 3 bright;
             goto missile;
-        Death:
+        death:
+        gib:
 		    #### I 0 bright spawn("HDExplosion", pos, ALLOW_REPLACE);
             #### I 6 bright A_Scream();
             #### J 5 bright A_NoBlocking();
