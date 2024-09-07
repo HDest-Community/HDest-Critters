@@ -12,8 +12,6 @@ class Rat : HDMobBase {
 
     Default {
         +FRIENDLY
-        +DONTHARMSPECIES
-        +NOINFIGHTING
         -COUNTKILL
 
         health 8;
@@ -25,6 +23,8 @@ class Rat : HDMobBase {
         scale 0.333;
         maxstepheight 8;
         maxdropoffheight 64;
+        meleerange 12;
+        hdmobbase.seedist 10 * HDCONST_ONEMETRE;
         
         tag "$TAG_RAT";
         obituary "$OB_RAT";
@@ -39,38 +39,60 @@ class Rat : HDMobBase {
     override void Tick() {
         super.Tick();
 
-        // if (hd_debug && !(Level.time % 35)) {
-        //     if (target) console.printf("[Rat] Target: "..target.GetClassName());
-        //     if (threat) console.printf("[Rat] Threat: "..threat.GetClassName());
-        // }
-
         if (health) {
-            threat = null;
+            let threatened = false;
+            let prevThreat = threat;
 
             Actor mo;
-            for (let iter = BlockThingsIterator.Create(self, random(512, 1024)); iter.Next(); mo = iter.thing) {
+            for (let iter = BlockThingsIterator.Create(self, seedist); iter.Next(); mo = iter.thing) {
 
-                // If the thing doesn't exist, or is the rat itself, or is another rat, skip.
-                if (!mo || mo == self || mo.GetClassName() == GetClassName()) continue;
+                // If the thing doesn't exist,
+                // or is the rat itself,
+                // or is another rat,
+                // or is dead,
+                // or isn't a player or another mob,
+                // skip.
+                if (!mo
+                    || mo == self
+                    || mo.GetClassName() == GetClassName()
+                    || !(mo is 'HDPlayerPawn' || mo is 'HDMobBase')
+                    || HDMath.IsDead(mo)
+                ) continue;
+
+                let dist = Distance3D(mo);
                 
-                // If the thing is a player or another mob and isn't dead, continue.
-                if ((mo is 'HDPlayerPawn' || mo is 'HDMobBase') && !HDMath.IsDead(mo)) {
-                
-                    // If that thing is close enough and within sight, make it the threat.
-                    if (Distance3D(mo) < (random(0, mo.mass / mass) * HDCONST_ONEMETRE) && CheckSight(mo)) {
-                        threat = mo;
-                    }
-    
-                    // If that thing is big enough and is standing on top of the rat, crush rat.
-                    if (
-                        mo.mass >= (mass * 10)
-                        && mo.pos.z == pos.z + height
-                        && Distance2D(mo) < radius + mo.radius
-                    ) {
-                        A_Die();
-                        break;
-                    }
+                // If the rat isn't frightened or that thing is not the current threat,
+                // and either there is no current threat or that thing is closer than the current threat,
+                // and that thing is within sight,
+                // make it the current threat and make the rat frightened.
+                if (
+                    (!bFRIGHTENED || prevThreat != mo)
+                    && (!prevThreat || dist < Distance3D(prevThreat))
+                    && CheckSight(mo)
+                ) {
+                    threatened = true;
+                    threat = mo;
+                    bFRIGHTENED = true;
                 }
+
+                // If that thing is big enough and is standing on top of the rat, crush rat.
+                if (
+                    mo.mass >= (mass * 10)
+                    && mo.pos.z == pos.z + height
+                    && Distance2D(mo) < radius + mo.radius
+                ) {
+                    A_Die();
+                    break;
+                }
+            }
+
+            if (feedTics < 0) feedTics++;
+
+            // If the rat is currently frightened but has no threat,
+            // make the rat no longer frightened.
+            if (bFRIGHTENED && !threatened) {
+                threat = null;
+                bFRIGHTENED = false;
             }
         }
     }
@@ -84,59 +106,19 @@ class Rat : HDMobBase {
     ) {
         return other
             && other.bIsMonster
+            && other.GetClassName() != GetClassName()
             && HDMath.IsDead(other)
-            && CheckSight(other);
-    }
-
-    action void A_FindFood() {
-        // if (hd_debug) console.printf("[Rat] FeedTics: "..invoker.feedTics);
-
-        Actor corpse;
-
-        // Find closest corpse to eat
-        if (invoker.feedTics == 0) {
-            double corpseDist = -1.0;
-            
-            Actor mo;
-            for (let iter = BlockThingsIterator.Create(self, 1024); iter.Next(); mo = iter.thing) {
-
-                if (!mo || mo == self || mo.GetClassName() == GetClassName() || !HDMath.IsDead(mo)) continue;
-
-                let dist = Distance3D(mo);
-
-                if (corpseDist < 0 || dist < corpseDist && invoker.CheckSight(mo)) {
-                    corpse = mo;
-                    corpseDist = dist;
-                }
-            }
-            
-            if (corpse && corpseDist >= 0) invoker.target = corpse;
-        }
-
-        if (invoker.feedTics < 0 || (corpse && invoker.Distance3D(corpse) < 12)) {
-            invoker.feedTics++;
-        }
-
-        if (invoker.feedTics >= random()) {
-            invoker.target = null;
-            invoker.feedTics = -invoker.feedTics;
-            invoker.SetStateLabel('Wander');
-            return;
-        }
-
-        if (invoker.target) {
-            invoker.SetStateLabel('Chase');
-        }
+            && CheckSight(other)
+            && (!target || Distance3D(other) < Distance3D(target));
     }
 
     States {
         Spawn:
-            RATA A 0 ; // A_HDLook();
-            goto See;
+            RATA A 0 A_HDLook(LOF_NOSOUNDCHECK);
+            loop;
 
         See:
-            // #### # random(4, 8) A_HDChase();
-            #### # 0 A_JumpIf(threat && !random(0, feedTics), 'Flee');
+            #### # 0 A_JumpIf(threat, 'Flee');
             #### # 0 A_JumpIf(target, 'Chase');
             goto Wander;
 
@@ -152,7 +134,7 @@ class Rat : HDMobBase {
             #### BBBB 4 {
                 angle += frandom(-2, 2);
 
-                A_FindFood();
+                A_HDLook(LOF_NOJUMP);
             }
             #### B 2 {
                 angle += frandom(-20, 20);
@@ -162,11 +144,13 @@ class Rat : HDMobBase {
                 }
             }
             #### B 2 {
-                if (!random(0, 6)) {
+                if (target || threat) {
+                    SetStateLabel('See');
+                } else if (!random(0, 6)) {
                     SetStateLabel('Wander');
                 }
             }
-            Loop;
+            loop;
 
         Wander:
             #### # 0 A_JumpIf(!random(0, 15), 'Sniff');
@@ -174,8 +158,19 @@ class Rat : HDMobBase {
             goto See;
 
         Chase:
-            #### ABC random(2, 6) A_HDChase();
+            #### ABC random(2, 6) A_HDChase('melee', null);
             goto See;
+
+        Melee:
+            #### # random(10, 30) {
+                if (Distance3D(target) < meleerange && feedTics < random()) {
+                    feedTics++;
+                } else {
+                    feedTics = -feedTics;
+                }
+            }
+            #### # 0 A_JumpIf(feedTics < 0, 'Wander');
+            loop;
 
         Flee:
             #### ABC random(2, 4) A_HDChase(null, null, CHF_FLEE);
@@ -189,6 +184,6 @@ class Rat : HDMobBase {
         Gib:
             #### # 0 A_Vocalize(deathsound);
             #### DEF 4 A_GibSplatter();
-            Stop;
+            stop;
     }
 }
