@@ -33,3 +33,7 @@ Doggies
 - Gray Rottweiler Sprites: Laz Rojas, id Software
 - Zombie Jackal Sprites: Captain Toenail, id Software
 - Zombie Rottweiler Sprites: Captain Toenail, Laz Rojas, id Software  
+
+Rat
+- Sounds: FreeSounds
+- Sprites: Raven Software, Neoworm, DoomedArchvileDemon

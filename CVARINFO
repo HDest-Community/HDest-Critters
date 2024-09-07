@@ -19,6 +19,9 @@ server int  gibmonster_deaddemon_spawn_bias    = 4;
 server int  gibmonster_cybergibs_spawn_bias    = 4;
 server bool gibmonster_persistent_spawning     = false;
 
+server int  rat_corpse_spawn_bias              = 14;
+server bool rat_persistent_spawning            = false;
+
 server int  stillalive_spawn_bias              = 14;
 server bool stillalive_persistent_spawning     = false;
 

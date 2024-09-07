@@ -4,6 +4,7 @@
 TAG_DOGGY                              = "Doggy";
 TAG_EVILSPRITE                         = "Evil Sprite";
 TAG_GIBMONSTER                         = "Gib Monster";
+TAG_RAT                                = "Rat";
 TAG_STILLALIVE                         = "Impaled Zombieman";
 TAG_WITHERED                           = "Withered";
 
@@ -16,6 +17,9 @@ OB_EVILSPRITE_HIT                      = "%o got their teeth stolen.";
 
 OB_GIBMONSTER                          = "%o was chewed by a reanimated gib.";
 OB_GIBMONSTER_HIT                      = "%o was chewed by a reanimated gib.";
+
+OB_RAT                                 = "%o was plagued by a rat.";
+OB_RAT_HIT                             = "%o was plagued by a rat.";
 
 OB_STILLALIVE                          = "%o couldn't hit an impaled pistol zombie.";
 OB_STILLALIVE_HIT                      = "%o couldn't hit an impaled pistol zombie.";
@@ -72,7 +76,8 @@ MENU_GIBMONSTER_DEADIMP_SPAWNTEXT      = "Control the rate that Gib Monsters spa
 MENU_GIBMONSTER_DEADDEMON_SPAWNTEXT    = "Control the rate that Gib Monsters spawn on Dead Demons:";
 MENU_GIBMONSTER_CYBERGIBS_SPAWNTEXT    = "Control the rate that Gib Monsters spawn with Cyberdemon Gibs:";
 
-MENU_STILLALIVE_SPAWNTEXT              = "Control the rate that Impaled Zombiemen spawn with pistols:";
+MENU_RAT_SPAWNTEXT                     = "Control the rate that Impaled Zombiemen spawn with corpses:";
+
 
 MENU_WITHERED_ZOMBIEMAN_SPAWNTEXT      = "Control the rate that Withereds spawn on Zombiemen:";
 MENU_WITHERED_SHOTGUNGUY_SPAWNTEXT     = "Control the rate that Withereds spawn on Shotgun Guys:";

@@ -4,11 +4,12 @@ OptionMenu CrittersMenu
 
     StaticText "$MENU_MONSTERS_TITLE", "Yellow"
     StaticText ""
-    Submenu "$TAG_DOGGY", "Doggy", 0, 1
-    Submenu "$TAG_EVILSPRITE", "EvilSprite", 0, 1
-    Submenu "$TAG_GIBMONSTER", "GibMonster", 0, 1
-    Submenu "$TAG_STILLALIVE", "StillAlive", 0, 1
-    Submenu "$TAG_WITHERED", "Withered", 0, 1
+    Submenu "$TAG_DOGGY", "DoggySpawns", 0, 1
+    Submenu "$TAG_EVILSPRITE", "EvilSpriteSpawns", 0, 1
+    Submenu "$TAG_GIBMONSTER", "GibMonsterSpawns", 0, 1
+    Submenu "$TAG_RAT", "RatSpawns", 0, 1
+    Submenu "$TAG_STILLALIVE", "StillAliveSpawns", 0, 1
+    Submenu "$TAG_WITHERED", "WitheredSpawns", 0, 1
     StaticText ""
 
     StaticText "$MENU_RESETOPTIONS_TITLE", "red"
@@ -25,7 +26,7 @@ AddOptionMenu "HDAddonMenu" {
 }
 
 
-OptionMenu Doggy
+OptionMenu DoggySpawns
 {
     Title "$TAG_DOGGY"
 
@@ -57,7 +58,7 @@ OptionMenu Doggy
     SafeCommand "$MENU_RESETALLOPTIONS", "doggy_reset_cvars"
 }
 
-OptionMenu EvilSprite
+OptionMenu EvilSpriteSpawns
 {
     Title "$TAG_EVILSPRITE"
 
@@ -95,7 +96,7 @@ OptionMenu EvilSprite
     SafeCommand "$MENU_RESETALLOPTIONS", "evilsprite_reset_cvars"
 }
 
-OptionMenu GibMonster
+OptionMenu GibMonsterSpawns
 {
     Title "$TAG_GIBMONSTER"
 
@@ -135,7 +136,33 @@ OptionMenu GibMonster
     SafeCommand "$MENU_RESETALLOPTIONS", "gibmonster_reset_cvars"
 }
 
-OptionMenu StillAlive
+OptionMenu RatSpawns
+{
+    Title "$TAG_RAT"
+
+    StaticText "$MENU_NOTICE", "Yellow"
+    StaticText "$MENU_SPAWNRATE_TEXT1", "White"
+    StaticText "$MENU_SPAWNRATE_TEXT2", "White"
+    StaticText ""
+
+    StaticText "$MENU_MONSPAWNOPTIONS", "Yellow"
+    StaticText "$MENU_RAT_SPAWNTEXT", "White"
+    ScaleSlider "$MENU_SPAWNRATE", "rat_corpse_spawn_bias", -1, 999, 1, "$MENU_WITHALL", "$MENU_DISABLED"
+    SafeCommand "$MENU_RESETMONSTER", "resetcvar rat_corpse_spawn_bias"
+    StaticText ""
+
+    StaticText "$MENU_PERSISTENCYOPTIONS", "Yellow"
+    StaticText "$MENU_PERSISTENCY_TEXT", "White"
+    Option "$MENU_MONPERSISTENCY", "rat_persistent_spawning", "OnOff"
+    SafeCommand "$MENU_RESETPERSISTENCY", "resetcvar rat_persistent_spawning"
+    StaticText ""
+    StaticText ""
+
+    StaticText "$MENU_RESETOPTIONS", "Yellow"
+    SafeCommand "$MENU_RESETALLOPTIONS", "rat_reset_cvars"
+}
+
+OptionMenu StillAliveSpawns
 {
     Title "$TAG_STILLALIVE"
 
@@ -161,7 +188,7 @@ OptionMenu StillAlive
     SafeCommand "$MENU_RESETALLOPTIONS", "stillalive_reset_cvars"
 }
 
-OptionMenu Withered
+OptionMenu WitheredSpawns
 {
     Title "$TAG_WITHERED"
 

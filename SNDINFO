@@ -48,3 +48,10 @@ $alias stillAlive/sight  grunt/sight
 $alias stillAlive/active grunt/active
 $alias stillAlive/pain   grunt/pain
 $alias stillAlive/death  grunt/death
+
+Rat/Sight DSRATSEE
+Rat/Pain  DSRATPAN
+Rat/Death DSRATDIE
+Rat/Hit   DSRATHIT
+
+$alias Rat/Active DSRATSEE
