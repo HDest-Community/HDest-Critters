@@ -1,6 +1,8 @@
+
+// Withered
 $random ZombieFodder/Sight { FODDERSEE1 FODDERSEE2 }
-FODDERSEE1	FODDSEE1
-FODDERSEE2	FODDSEE2
+FODDERSEE1           FODDSEE1
+FODDERSEE2           FODDSEE2
 
 $random ZombieFodder/Active { FODDERACT1 FODDERACT2 }
 FODDERACT1	FODDACT1
@@ -13,45 +15,50 @@ FODDERDIE1	FODDDIE1
 FODDERDIE2	FODDDIE2
 
 ZombieFodder/Melee  DSCLAW
-ZombieFodder/Soul	FODDSOUL
+ZombieFodder/Soul    FODDSOUL
 
 ZombieFodder/Summon FODDSUMM
-$rolloff Afflicted/ScreechSummon 650 2800
+$rolloff ZombieFodder/Summon 650 2800
 
-ZFlesh/Throw	FODDATK
-ZFlesh/Miss		FODDMISS
-ZFlesh/Hit		FODDHIT
+ZFlesh/Throw FODDATK
+ZFlesh/Miss  FODDMISS
+ZFlesh/Hit   FODDHIT
 
+// Gib Monster
 $alias GibMonster/Sight  Babuin/sight
 $alias GibMonster/Active Babuin/active
 $alias GibMonster/Pain   Babuin/pain
 $alias GibMonster/Death  Babuin/death
 $alias GibMonster/Bite   Babuin/bite
 
-EvilSprite/See		BSKULSEE
-EvilSprite/Pain		BSKULPIN
+// Evil Sprite
+EvilSprite/See          BSKULSEE
+EvilSprite/Pain         BSKULPIN
 
 $alias EvilSprite/melee Imp/melee
 $alias EvilSprite/spit  Putto/spit
 $alias EvilSprite/death Putto/death
 
-Dog/Sight		DSDOGSEE
-Dog/Active		DSDOGIDL
-Dog/Pain		DSDOGPAN
+// Doggy
+Dog/Sight           DSDOGSEE
+Dog/Active          DSDOGIDL
+Dog/Pain            DSDOGPAN
 Dog/Attack		DSDOGATK
 Dog/Death		DSDOGDIE
 
 $alias Dog/Step/Dry Babuin/step
 $alias Dog/Step/Wet Babuin/wormstep
 
+// Still Alive Stick
 $alias stillAlive/sight  grunt/sight
 $alias stillAlive/active grunt/active
 $alias stillAlive/pain   grunt/pain
 $alias stillAlive/death  grunt/death
 
-Rat/Sight DSRATSEE
-Rat/Pain  DSRATPAN
-Rat/Death DSRATDIE
-Rat/Hit   DSRATHIT
+// Rat
+Rat/Sight         DSRATSEE
+Rat/Pain          DSRATPAN
+Rat/Death         DSRATDIE
+Rat/Hit           DSRATHIT
 
 $alias Rat/Active DSRATSEE
