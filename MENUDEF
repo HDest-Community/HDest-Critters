@@ -49,7 +49,7 @@ OptionMenu DoggySpawns
 
     StaticText "$MENU_PERSISTENCYOPTIONS", "Yellow"
     StaticText "$MENU_PERSISTENCY_TEXT", "White"
-    Option "$MENU_MONPERSISTENCY", "doggy_persistent_spawning", "OnOff"
+    Option "$MENU_PERSISTENCY", "doggy_persistent_spawning", "OnOff"
     SafeCommand "$MENU_RESETPERSISTENCY", "resetcvar doggy_persistent_spawning"
     StaticText ""
     StaticText ""
@@ -87,7 +87,7 @@ OptionMenu EvilSpriteSpawns
 
     StaticText "$MENU_PERSISTENCYOPTIONS", "Yellow"
     StaticText "$MENU_PERSISTENCY_TEXT", "White"
-    Option "$MENU_MONPERSISTENCY", "evilsprite_persistent_spawning", "OnOff"
+    Option "$MENU_PERSISTENCY", "evilsprite_persistent_spawning", "OnOff"
     SafeCommand "$MENU_RESETPERSISTENCY", "resetcvar evilsprite_persistent_spawning"
     StaticText ""
     StaticText ""
@@ -127,7 +127,7 @@ OptionMenu GibMonsterSpawns
 
     StaticText "$MENU_PERSISTENCYOPTIONS", "Yellow"
     StaticText "$MENU_PERSISTENCY_TEXT", "White"
-    Option "$MENU_MONPERSISTENCY", "gibmonster_persistent_spawning", "OnOff"
+    Option "$MENU_PERSISTENCY", "gibmonster_persistent_spawning", "OnOff"
     SafeCommand "$MENU_RESETPERSISTENCY", "resetcvar gibmonster_persistent_spawning"
     StaticText ""
     StaticText ""
@@ -153,7 +153,7 @@ OptionMenu RatSpawns
 
     StaticText "$MENU_PERSISTENCYOPTIONS", "Yellow"
     StaticText "$MENU_PERSISTENCY_TEXT", "White"
-    Option "$MENU_MONPERSISTENCY", "rat_persistent_spawning", "OnOff"
+    Option "$MENU_PERSISTENCY", "rat_persistent_spawning", "OnOff"
     SafeCommand "$MENU_RESETPERSISTENCY", "resetcvar rat_persistent_spawning"
     StaticText ""
     StaticText ""
@@ -179,7 +179,7 @@ OptionMenu StillAliveSpawns
 
     StaticText "$MENU_PERSISTENCYOPTIONS", "Yellow"
     StaticText "$MENU_PERSISTENCY_TEXT", "White"
-    Option "$MENU_MONPERSISTENCY", "stillalive_persistent_spawning", "OnOff"
+    Option "$MENU_PERSISTENCY", "stillalive_persistent_spawning", "OnOff"
     SafeCommand "$MENU_RESETPERSISTENCY", "resetcvar stillalive_persistent_spawning"
     StaticText ""
     StaticText ""
@@ -232,7 +232,7 @@ OptionMenu WitheredSpawns
 
     StaticText "$MENU_PERSISTENCYOPTIONS", "Yellow"
     StaticText "$MENU_PERSISTENCY_TEXT", "White"
-    Option "$MENU_MONPERSISTENCY", "withered_persistent_spawning", "OnOff"
+    Option "$MENU_PERSISTENCY", "withered_persistent_spawning", "OnOff"
     SafeCommand "$MENU_RESETPERSISTENCY", "resetcvar withered_persistent_spawning"
     StaticText ""
     StaticText ""
