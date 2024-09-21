@@ -43,8 +43,7 @@ class Rat : HDMobBase {
             let threatened = false;
             let prevThreat = threat;
 
-            Actor mo;
-            for (let iter = BlockThingsIterator.Create(self, seedist); iter.Next(); mo = iter.thing) {
+            foreach (mo : BlockThingsIterator.Create(self, seedist)) {
 
                 // If the thing doesn't exist,
                 // or is the rat itself,
