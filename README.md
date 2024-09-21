@@ -37,3 +37,6 @@ Doggies
 Rat
 - Sounds: FreeSounds
 - Sprites: Raven Software, Neoworm, DoomedArchvileDemon
+
+Shock Imps
+- Sprites: Vader, Tormentor667, Ghastly Dragon, Keksdose, Sandypaper, Wildweasel, Raven Software

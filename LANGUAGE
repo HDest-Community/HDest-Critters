@@ -5,6 +5,7 @@ TAG_DOGGY                              = "Doggy";
 TAG_EVILSPRITE                         = "Evil Sprite";
 TAG_GIBMONSTER                         = "Gib Monster";
 TAG_RAT                                = "Rat";
+TAG_SHIMP                              = "Shocker Imp"
 TAG_STILLALIVE                         = "Impaled Zombieman";
 TAG_WITHERED                           = "Withered";
 
@@ -20,6 +21,9 @@ OB_GIBMONSTER_HIT                      = "%o was chewed by a reanimated gib.";
 
 OB_RAT                                 = "%o was plagued by a rat.";
 OB_RAT_HIT                             = "%o was plagued by a rat.";
+
+OB_SHIMP                               = "%o experienced inversion.";
+OB_SHIMP_HIT                           = "%o experienced ALL the inversion.";
 
 OB_STILLALIVE                          = "%o couldn't hit an impaled pistol zombie.";
 OB_STILLALIVE_HIT                      = "%o couldn't hit an impaled pistol zombie.";
@@ -77,6 +81,8 @@ MENU_GIBMONSTER_DEADDEMON_SPAWNTEXT    = "Control the rate that Gib Monsters spa
 MENU_GIBMONSTER_CYBERGIBS_SPAWNTEXT    = "Control the rate that Gib Monsters spawn with Cyberdemon Gibs:";
 
 MENU_RAT_SPAWNTEXT                     = "Control the rate that Impaled Zombiemen spawn with corpses:";
+
+MENU_SHIMP_SPAWNTEXT                   = "Control the rate that Shocker Imps spawn on Imps:";
 
 MENU_STILLALIVE_SPAWNTEXT              = "Control the rate that Impaled Zombiemen spawn on Impaled Corpses:";
 

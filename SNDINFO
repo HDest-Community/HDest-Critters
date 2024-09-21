@@ -62,3 +62,10 @@ Rat/Death         DSRATDIE
 Rat/Hit           DSRATHIT
 
 $alias Rat/Active DSRATSEE
+
+// Shock Imp
+$alias shockimp/sight  imp/sight
+$alias shockimp/pain   imp/pain
+$alias shockimp/death  imp/death
+$alias shockimp/active imp/active
+$alias shockimp/melee  imp/melee

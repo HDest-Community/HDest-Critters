@@ -9,6 +9,7 @@ OptionMenu CrittersMenu
     Submenu "$TAG_GIBMONSTER", "GibMonsterSpawns", 0, 1
     Submenu "$TAG_RAT", "RatSpawns", 0, 1
     Submenu "$TAG_STILLALIVE", "StillAliveSpawns", 0, 1
+    Submenu "$TAG_SHIMP", "ShockImpSpawns", 0, 1
     Submenu "$TAG_WITHERED", "WitheredSpawns", 0, 1
     StaticText ""
 
@@ -160,6 +161,32 @@ OptionMenu RatSpawns
 
     StaticText "$MENU_RESETOPTIONS", "Yellow"
     SafeCommand "$MENU_RESETALLOPTIONS", "rat_reset_cvars"
+}
+
+OptionMenu ShockImpSpawns
+{
+    Title "$TAG_SHIMP"
+
+    StaticText "$MENU_NOTICE", "Yellow"
+    StaticText "$MENU_SPAWNRATE_TEXT1", "White"
+    StaticText "$MENU_SPAWNRATE_TEXT2", "White"
+    StaticText ""
+
+    StaticText "$MENU_MONSPAWNOPTIONS", "Yellow"
+    StaticText "$MENU_SHIMP_SPAWNTEXT", "White"
+    ScaleSlider "$MENU_SPAWNRATE", "shockimp_spawn_bias", -1, 999, 1, "$MENU_REPLACEALL", "$MENU_DISABLED"
+    SafeCommand "$MENU_RESETMONSTER", "resetcvar shockimp_spawn_bias"
+    StaticText ""
+
+    StaticText "$MENU_PERSISTENCYOPTIONS", "Yellow"
+    StaticText "$MENU_PERSISTENCY_TEXT", "White"
+    Option "$MENU_PERSISTENCY", "shockimp_persistent_spawning", "OnOff"
+    SafeCommand "$MENU_RESETPERSISTENCY", "resetcvar shockimp_persistent_spawning"
+    StaticText ""
+    StaticText ""
+
+    StaticText "$MENU_RESETOPTIONS", "Yellow"
+    SafeCommand "$MENU_RESETALLOPTIONS", "shockimp_reset_cvars"
 }
 
 OptionMenu StillAliveSpawns

@@ -198,6 +198,11 @@ class CrittersHandler : EventHandler {
         spawns_rat.push(addEnemyEntry('HDMt5NS', rat_corpse_spawn_bias));
         addEnemy('RatSpawner', spawns_rat, rat_persistent_spawning, false);
 
+        // Shocker Imp
+        Array<CritterSpawnEnemyEntry> spawns_shimp;
+        spawns_shimp.push(addEnemyEntry('DoomImp', shockimp_spawn_bias));
+        addEnemy('ShockImp', spawns_shimp, shockimp_persistent_spawning);
+
         // Still Alive Stick
         Array<CritterSpawnEnemyEntry> spawns_stillAlive;
         spawns_stillAlive.push(addEnemyEntry('LiveStick', stillalive_spawn_bias));
