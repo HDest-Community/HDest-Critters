@@ -124,10 +124,6 @@ class Rat : HDMobBase {
             #### B 2;
             #### B 2 {
                 angle += frandom(-20, 20);
-                
-                if (!random(0, 9)) {
-                    A_Vocalize(activesound);
-                }
             }
             #### BBBB 4 {
                 angle += frandom(-2, 2);
@@ -136,12 +132,12 @@ class Rat : HDMobBase {
             }
             #### B 2 {
                 angle += frandom(-20, 20);
-                
+            }
+            #### B 2 {
                 if (!random(0, 9)) {
                     A_Vocalize(activesound);
                 }
-            }
-            #### B 2 {
+
                 if (target || threat) {
                     SetStateLabel('See');
                 } else if (!random(0, 6)) {
