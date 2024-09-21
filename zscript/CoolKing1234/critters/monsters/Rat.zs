@@ -113,7 +113,7 @@ class Rat : HDMobBase {
     States {
         Spawn:
             RATA A 0 A_HDLook(LOF_NOSOUNDCHECK);
-            loop;
+            goto See;
 
         See:
             #### # 0 A_JumpIf(threat, 'Flee');
