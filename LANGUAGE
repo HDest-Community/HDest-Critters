@@ -5,7 +5,7 @@ TAG_DOGGY                              = "Doggy";
 TAG_EVILSPRITE                         = "Evil Sprite";
 TAG_GIBMONSTER                         = "Gib Monster";
 TAG_RAT                                = "Rat";
-TAG_SHIMP                              = "Shocker Imp"
+TAG_SHIMP                              = "Shocker Imp";
 TAG_STILLALIVE                         = "Impaled Zombieman";
 TAG_WITHERED                           = "Withered";
 
