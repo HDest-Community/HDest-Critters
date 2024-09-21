@@ -1,6 +1,5 @@
 class Rat : HDMobBase {
 
-    bool scared;
     int feedTics;
 
     override void PostBeginPlay() {
