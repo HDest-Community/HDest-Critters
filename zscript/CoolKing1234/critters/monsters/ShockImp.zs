@@ -11,14 +11,10 @@ class ShockImp : FighterImp {
         -missilemore
         translation "";
 
-        speed 10;
-        health 90;
-        maxdropoffheight 96;
+        HDMobBase.downedframe 22;
         
-		HDMobBase.downedframe 22;
-        
-		damagefactor "hot", 0.825;
-		damagefactor "electric", 0.5;
+        damagefactor "hot", 0.825;
+        damagefactor "electrical", 0.5;
 
         seesound "shockimp/sight";
         painsound "shockimp/pain";
@@ -28,7 +24,50 @@ class ShockImp : FighterImp {
 
         obituary "$OB_SHIMP";
         hitobituary "$OB_SHIMP_HIT";
-        tag "$CC_SHIMP";
+        tag "$TAG_SHIMP";
+    }
+
+    override void Tick() {
+        super.Tick();
+
+        if (health > 0 && !random(0, health)) A_ShimpZapArc();
+    }
+
+    action void A_ShimpZapArc(
+        double rad = 0.0,
+        int maxdamage = 8,
+        bool indiscriminate = false
+    ) {
+        Array<Actor> zappables;
+        zappables.clear();
+
+        if(!rad) rad = frandom(32, 128);
+
+        foreach (it : BlockThingsIterator.Create(invoker, rad)) {
+            if (
+                it != invoker
+                && !(it is "ShockImp")
+                && it.bshootable
+                && invoker.bFRIENDLY != it.bFRIENDLY
+                && invoker.Distance3DSquared(it) <= (rad * rad)
+                && invoker.CheckSight(it)
+            ) {
+                zappables.push(it);
+            }
+        }
+
+        Actor itt;
+        if (zappables.size()) {
+            itt = zappables[random(0, zappables.size() - 1)];
+        }
+
+        
+        if (itt) {
+            ZapArc(invoker, itt, 0, rad, rad * 0.3, dev: 0.8);
+            itt.damagemobj(invoker, invoker, random(1, maxdamage), "electrical");
+        } else {
+            ZapArc(invoker, null, ARC2_RANDOMDEST, rad, rad * 0.3, dev: 0.8);
+        }
     }
 
     states {
@@ -56,8 +95,9 @@ class ShockImp : FighterImp {
             #### # 0 A_Strafe();
             #### FG random(6, 8) A_LeadTarget(min(20, lasttargetdist / getdefaultbytype("ShockImpBall").speed));
             #### # 0 A_JumpIf(!HDMobAI.TryShoot(self, gunheight, 256, 10, 10, flags: HDMobAI.TS_GEOMETRYOK), "see");
-            #### HIJK random (4, 6);
+            #### HIJK random (4, 6) A_ShimpZapArc();
             #### L 6 A_SpawnProjectile("ShockImpBall", 34, 0, 0, CMF_AIMDIRECTION, pitch - frandom(0, 0.1));
+            #### # 0 A_ShimpZapArc();
             #### M 4 A_ChangeVelocity(0, frandom(-3, 3), 0, CVF_RELATIVE);
             #### # 0 A_JumpIfTargetInsideMeleeRange("melee");
             #### # 0 A_JumpIf(!HDMobAI.TryShoot(self, gunheight, 512, 10, 10, flags: HDMobAI.TS_GEOMETRYOK), "see");
@@ -67,10 +107,13 @@ class ShockImp : FighterImp {
 
         spam:
             #### E random(4, 6);
-            #### FG 2 A_Strafe();
-            #### HIJK random(6, 8);
+            #### # 0 A_Strafe();
+            #### F 2 A_ShimpZapArc();
+            #### # 0 A_Strafe();
+            #### G 2 A_ShimpZapArc();
+            #### HIJK random(6, 8) A_ShimpZapArc();
             #### L 6 A_SpawnProjectile("ShockImpBall", gunheight, 0, frandom(-3, 4), CMF_AIMDIRECTION, pitch + frandom(-2, 1.8));
-            #### M 4;
+            #### M 4 A_ShimpZapArc();
             #### # 0 A_JumpIf(firefatigue > HDCONST_MAXFIREFATIGUE, "pain");
         coverfire:
             #### # 0 A_JumpIfTargetInLOS("see");
@@ -84,7 +127,7 @@ class ShockImp : FighterImp {
             goto missile;
 
         juke:
-            #### ABCD 4{
+            #### ABCD 4 {
                 A_Strafe();
                 A_TurnToAim(40, gunheight);
             }
@@ -92,23 +135,23 @@ class ShockImp : FighterImp {
             
         melee:
             #### EFG random(6, 8) A_FaceLastTargetPos();
-            #### HIJK random(4, 6);
-            #### L 8 bright A_FireballerScratch("ShockImpBall", random(10, 30), ballchance: 1);
-            #### M 4;
+            #### HIJK random(4, 6) A_ShimpZapArc();
+            #### L 8 bright A_FireballerScratch("ShockImpBall", random(10, 30));
+            #### M 4 A_ShimpZapArc();
             goto see;
 
         missile:
             #### # 0 A_JumpIf(stamina > random(5, 10), "recharge");
             #### # 0 A_JumpIf(health < random(0, 200), 1);
             goto juke;
+            #### # 4 A_Jump(8, "missile");
             #### EFG random(6, 8) {
                 A_FaceLastTargetPos(3, 32, FLTP_TOP);
                 A_LeadTarget(lasttargetdist * 0.15, maxturn: 45);
             }
-            #### HIJK random(4, 6);
+            #### HIJK random(4, 6) A_ShimpZapArc();
             #### L 8 bright A_SpawnProjectile("ShockImpBall", flags: CMF_AIMDIRECTION, pitch);
-            #### M 4;
-            #### E 4 A_Jump(8, "missile");
+            #### M 4 A_ShimpZapArc();
             goto see;
 
         hork:
@@ -118,12 +161,15 @@ class ShockImp : FighterImp {
             #### # 0 A_Vocalize(seesound);
             #### EEEEE 2 A_SpawnItemEx("ReverseShockImpBallTail", 4, 24, gunheight, 1, 0, 0, 0, 160);
             #### EFG 2 A_Strafe();
-            #### HIJK random(4, 6);
+            #### HIJK random(4, 6) A_ShimpZapArc();
+            #### # 0 A_ShimpZapArc();
             #### # 0 A_SpawnProjectile("ShockImpBall", gunheight, 0, (frandom(-2, 10)), CMF_AIMDIRECTION, pitch + frandom(-4, 3.6));
+            #### # 0 A_ShimpZapArc();
             #### # 0 A_SpawnProjectile("ShockImpBall", gunheight, 0, (frandom(-4, 4)), CMF_AIMDIRECTION, pitch + frandom(-4, 3.6));
+            #### # 0 A_ShimpZapArc();
             #### # 0 A_SpawnProjectile("ShockImpBall", gunheight, 0, (frandom(-2, -10)), CMF_AIMDIRECTION, pitch + frandom(-4, 3.6));
             #### L 8;
-            #### M 4;
+            #### M 4 A_ShimpZapArc();
             #### # 0 A_JumpIf(!HDMobAI.TryShoot(self, 32, 256, 10, 10, flags: HDMobAI.TS_GEOMETRYOK), "see");
             #### # 0 A_Watch();
             goto see;
@@ -232,7 +278,7 @@ class ShockImpBall : Foof {
                     )
                 ) {
                     A_Face(zit, 0, 0, flags: FAF_MIDDLE);
-                    CacoZapArc(self, zit, ARC2_RANDOMDEST);
+                    ZapArc(self, zit, ARC2_RANDOMDEST);
                     zit.damagemobj(self, tb, random(0, 7), "electrical");
                     didzap = true;
                     break;
@@ -246,7 +292,7 @@ class ShockImpBall : Foof {
         }
 
         if (!didzap) {
-            CacoZapArc(self, null, ARC2_SILENT, radius: 32, height: 32, pvel: vel);
+            ZapArc(self, null, ARC2_SILENT, radius: 32, height: 32, pvel: vel);
         }
 
         A_FaceTracer(4,4);
@@ -307,9 +353,17 @@ class ReverseShockImpBallTail : ReverseImpBallTail {
 
     states {
         spawn:
-            BAL2 EEDC 2 bright A_FadeIn(0.2);
+            BAL2 EEDC 2 bright {
+                A_FadeIn(0.2);
+
+                ZapArc(self, null, ARC2_RANDOMDEST);
+            }
         death:
-            BAL2 BAB 2 bright A_FadeIn(0.2);
+            BAL2 BAB 2 bright {
+                A_FadeIn(0.2);
+
+                ZapArc(self, null, ARC2_RANDOMDEST);
+            }
             stop;
     }
 }
