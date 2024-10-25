@@ -18,6 +18,10 @@ Withered
 Impaled Zombiemen
 - Sprites: Orka, id Software
 
+Ghouls
+- Sounds: id Software, Chad Mossholder
+- Sprites: id Software
+
 Gib Monster
 - Sounds: id Software
 - Sprites: Neoworm, Lobotomy Software, id Software

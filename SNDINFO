@@ -43,8 +43,16 @@ $alias EvilSprite/death Putto/death
 Dog/Sight           DSDOGSEE
 Dog/Active          DSDOGIDL
 Dog/Pain            DSDOGPAN
-Dog/Attack		DSDOGATK
-Dog/Death		DSDOGDIE
+Dog/Attack          DSDOGATK
+Dog/Death           DSDOGDIE
+
+// Ghoul
+Ghoul/Sight  DSGHLSIT
+Ghoul/Active DSGHLACT
+Ghoul/Pain   DSGHLPAI
+Ghoul/Death  DSGHLDTH
+
+Ghoul/Attack DSSKLATK
 
 $alias Dog/Step/Dry Babuin/step
 $alias Dog/Step/Wet Babuin/wormstep

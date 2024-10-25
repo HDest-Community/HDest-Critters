@@ -133,6 +133,11 @@ class CrittersHandler : EventHandler {
         spawns_gibMonster_cyberGibs.push(addEnemyEntry('CyberGibs', gibmonster_cybergibs_spawn_bias));
         addEnemy('GibMonster', spawns_gibMonster_cyberGibs, true, false);
 
+        // Ghouls
+        Array<CritterSpawnEnemyEntry> spawns_ghoul;
+        spawns_ghoul.push(addEnemyEntry('LostSoul', ghoul_lostsoul_spawn_bias));
+        addEnemy('HDGhoul', spawns_ghoul, ghoul_persistent_spawning);
+
         // Rats
         Array<CritterSpawnEnemyEntry> spawns_rat;
         spawns_rat.push(addEnemyEntry('DeadZombieStormtrooper', rat_corpse_spawn_bias));

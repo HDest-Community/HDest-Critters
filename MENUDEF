@@ -6,6 +6,7 @@ OptionMenu CrittersMenu
     StaticText ""
     Submenu "$TAG_DOGGY", "DoggySpawns", 0, 1
     Submenu "$TAG_EVILSPRITE", "EvilSpriteSpawns", 0, 1
+    Submenu "$TAG_GHOUL", "GhoulSpawns", 0, 1
     Submenu "$TAG_GIBMONSTER", "GibMonsterSpawns", 0, 1
     Submenu "$TAG_RAT", "RatSpawns", 0, 1
     Submenu "$TAG_STILLALIVE", "StillAliveSpawns", 0, 1
@@ -95,6 +96,32 @@ OptionMenu EvilSpriteSpawns
 
     StaticText "$MENU_RESETOPTIONS", "Yellow"
     SafeCommand "$MENU_RESETALLOPTIONS", "evilsprite_reset_cvars"
+}
+
+OptionMenu GhoulSpawns
+{
+    Title "$TAG_GHOUL"
+
+    StaticText "$MENU_NOTICE", "Yellow"
+    StaticText "$MENU_SPAWNRATE_TEXT1", "White"
+    StaticText "$MENU_SPAWNRATE_TEXT2", "White"
+    StaticText ""
+
+    StaticText "$MENU_MONSPAWNOPTIONS", "Yellow"
+    StaticText "$MENU_GHOUL_SPAWNTEXT", "White"
+    ScaleSlider "$MENU_SPAWNRATE", "ghoul_lostsoul_spawn_bias", -1, 999, 1, "$MENU_REPLACEALL", "$MENU_DISABLED"
+    SafeCommand "$MENU_RESETMONSTER", "resetcvar ghoul_lostsoul_spawn_bias"
+    StaticText ""
+
+    StaticText "$MENU_PERSISTENCYOPTIONS", "Yellow"
+    StaticText "$MENU_PERSISTENCY_TEXT", "White"
+    Option "$MENU_PERSISTENCY", "ghoul_persistent_spawning", "OnOff"
+    SafeCommand "$MENU_RESETPERSISTENCY", "resetcvar ghoul_persistent_spawning"
+    StaticText ""
+    StaticText ""
+
+    StaticText "$MENU_RESETOPTIONS", "Yellow"
+    SafeCommand "$MENU_RESETALLOPTIONS", "ghoul_reset_cvars"
 }
 
 OptionMenu GibMonsterSpawns

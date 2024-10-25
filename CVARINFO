@@ -12,6 +12,9 @@ server int  evilsprite_deadimp_spawn_bias      = 14;
 server int  evilsprite_deaddemon_spawn_bias    = 9;
 server bool evilsprite_persistent_spawning     = false;
 
+server int  ghoul_lostsoul_spawn_bias = 14;
+server bool ghoul_persistent_spawning = false;
+
 server int  gibmonster_casings_spawn_bias      = 4;
 server int  gibmonster_gore_spawn_bias         = 49;
 server int  gibmonster_deadimp_spawn_bias      = 9;

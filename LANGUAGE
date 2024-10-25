@@ -3,6 +3,7 @@
 // Tags
 TAG_DOGGY                              = "Doggy";
 TAG_EVILSPRITE                         = "Evil Sprite";
+TAG_GHOUL                              = "Ghoul";
 TAG_GIBMONSTER                         = "Gib Monster";
 TAG_RAT                                = "Rat";
 TAG_SHIMP                              = "Shocker Imp";
@@ -15,6 +16,9 @@ OB_DOGGY_HIT                           = "%o was mauled by a doggy.";
 
 OB_EVILSPRITE                          = "%o got their teeth stolen.";
 OB_EVILSPRITE_HIT                      = "%o got their teeth stolen.";
+
+OB_GHOUL                               = "%o was shocked by a ghoul.";
+OB_GHOUL_HIT                           = "%o was shocked by a ghoul.";
 
 OB_GIBMONSTER                          = "%o was chewed by a reanimated gib.";
 OB_GIBMONSTER_HIT                      = "%o was chewed by a reanimated gib.";
@@ -73,6 +77,8 @@ MENU_EVILSPRITE_CASINGS_SPAWNTEXT      = "Control the rate that Evil Sprites spa
 MENU_EVILSPRITE_GORE_SPAWNTEXT         = "Control the rate that Evil Sprites spawn on Bits of Gore:";
 MENU_EVILSPRITE_DEADIMP_SPAWNTEXT      = "Control the rate that Evil Sprites spawn on Dead Imps:";
 MENU_EVILSPRITE_DEADDEMON_SPAWNTEXT    = "Control the rate that Evil Sprites spawn on Dead Demons:";
+
+MENU_GHOUL_SPAWNTEXT                   = "Control the rate that Ghouls spawn on Lost Souls:";
 
 MENU_GIBMONSTER_CASINGS_SPAWNTEXT      = "Control the rate that Gib Monsters spawn on Spent Casings:";
 MENU_GIBMONSTER_GORE_SPAWNTEXT         = "Control the rate that Gib Monsters spawn on Bits of Gore:";
