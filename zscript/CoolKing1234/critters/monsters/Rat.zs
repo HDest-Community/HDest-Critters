@@ -157,10 +157,14 @@ class Rat : HDMobBase {
 
         Melee:
             #### # random(10, 30) {
-                if (Distance3D(target) < meleerange && feedTics < random()) {
-                    feedTics++;
+                if (Distance3D(target) < meleerange) {
+                    if (feedTics < random()) {
+                        feedTics++;
+                    } else {
+                        feedTics = -feedTics;
+                    }
                 } else {
-                    feedTics = -feedTics;
+                    SetStateLabel('Chase');
                 }
             }
             #### # 0 A_JumpIf(feedTics < 0, 'Wander');
