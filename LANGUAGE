@@ -86,7 +86,7 @@ MENU_GIBMONSTER_DEADIMP_SPAWNTEXT      = "Control the rate that Gib Monsters spa
 MENU_GIBMONSTER_DEADDEMON_SPAWNTEXT    = "Control the rate that Gib Monsters spawn on Dead Demons:";
 MENU_GIBMONSTER_CYBERGIBS_SPAWNTEXT    = "Control the rate that Gib Monsters spawn with Cyberdemon Gibs:";
 
-MENU_RAT_SPAWNTEXT                     = "Control the rate that Impaled Zombiemen spawn with corpses:";
+MENU_RAT_SPAWNTEXT                     = "Control the rate that Rats spawn with corpses:";
 
 MENU_SHIMP_SPAWNTEXT                   = "Control the rate that Shocker Imps spawn on Imps:";
 
