@@ -9,7 +9,7 @@ class ShockImp : FighterImp {
         //$Sprite "TROOA1"
 
         -missilemore
-        translation "";
+        translation 0;
 
         HDMobBase.downedframe 22;
         
