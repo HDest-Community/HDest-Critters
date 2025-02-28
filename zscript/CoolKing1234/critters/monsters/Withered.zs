@@ -97,7 +97,8 @@ class WitheredSummoner : Withered {
     override void PostBeginPlay() {
         super.PostBeginPlay();
 
-        sprite = getspriteindex("ZFD4");
+        sprite = getspriteindex("ZFD"..random(1, 4));
+        resize(0.8, 1.1);
     }
 
     action void A_SummonWithereds() {
@@ -120,7 +121,7 @@ class WitheredSummoner : Withered {
 
     states {
         missile:
-            #### # 0 A_JumpIf(!summoned && target is 'HDPlayerPawn' && health < random(0, 30), 1);
+            #### # 0 A_JumpIf(!summoned && target is 'HDPlayerPawn' && health < random(0, 40), 1);
             goto super::missile;
             #### # 0 { bnopain = true; }
             #### V 8 A_FaceLastTargetPos();
