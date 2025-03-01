@@ -40,7 +40,8 @@ Doggies
 
 Rat
 - Sounds: FreeSounds
-- Sprites: Raven Software, Neoworm, DoomedArchvileDemon
+- Gray Rat Sprites: Raven Software, Neoworm, DoomedArchvileDemon
+- Brown Rat Sprites: Raven Software, Neoworm, DoomedArchvileDemon, with edits from OJSC's Major Crisis
 
 Shock Imps
 - Sprites: Vader, Tormentor667, Ghastly Dragon, Keksdose, Sandypaper, Wildweasel, Raven Software

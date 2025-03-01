@@ -2,13 +2,6 @@ class Rat : HDMobBase {
 
     int feedTics;
 
-    override void PostBeginPlay() {
-        super.PostBeginPlay();
-
-        resize(0.666, 1.5);
-        voicepitch = 1.6 - scale.x + frandom(-0.1, 0.1);
-    }
-
     Default {
         +FRIENDLY
         -COUNTKILL
@@ -34,6 +27,13 @@ class Rat : HDMobBase {
         deathsound "Rat/Death";
     }
 
+    override void PostBeginPlay() {
+        super.PostBeginPlay();
+
+        sprite = getspriteindex("RAT"..random(1, 2));
+        resize(0.666, 1.5);
+        voicepitch = 1.6 - scale.x + frandom(-0.1, 0.1);
+    }
 
     override void Tick() {
         super.Tick();
@@ -111,8 +111,11 @@ class Rat : HDMobBase {
     }
 
     States {
+        PreFetch:
+            RAT1 A 0;
+            RAT2 A 0;
         Spawn:
-            RATA A 0 A_HDLook(LOF_NOSOUNDCHECK);
+            RAT1 A 0 A_HDLook(LOF_NOSOUNDCHECK);
             goto See;
 
         See:
