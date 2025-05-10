@@ -1,0 +1,232 @@
+// TODO: Re-build once clusters are done via commands
+// newSpawnTable => { "spawnName": "Critters.DoggyRandom", "tableName": "Critters.DoggyRandom", "replaces": "false" }
+// newSpawnTable => { "spawnName": "Critters.WitheredRandom", "tableName": "Critters.WitheredRandom", "replaces": "false" }
+
+// Doggy Spawn Entries
+addSpawnTableSingleEntry => { "tableName": "HDCore.ZombieManReplaces", "name": "DoggySpawner", "weight": "#doggy_zombieman_spawn_bias", "persists": "#doggy_persistent_spawning" }
+addSpawnTableSingleEntry => { "tableName": "HDCore.ShotgunGuyReplaces", "name": "DoggySpawner", "weight": "#doggy_shotgunguy_spawn_bias", "persists": "#doggy_persistent_spawning" }
+addSpawnTableSingleEntry => { "tableName": "HDCore.DemonReplaces", "name": "DoggySpawner", "weight": "#doggy_demon_spawn_bias", "persists": "#doggy_persistent_spawning" }
+
+// Evil Sprite Spawn Entries
+addSpawnTableSingleEntry => { "tableName": "HDCore.LostSoulReplaces", "name": "EvilSprite", "weight": "#evilsprite_zombieman_spawn_bias", "persists": "#evilsprite_persistent_spawning" }
+addSpawnTableSingleEntry => { "tableName": "HDCore.HDCasingBitsReplaces", "name": "EvilSprite", "weight": "#evilsprite_zombieman_spawn_bias", "persists": "#evilsprite_persistent_spawning" }
+addSpawnTableSingleEntry => { "tableName": "HDCore.HDGoreBitsReplaces", "name": "EvilSprite", "weight": "#evilsprite_zombieman_spawn_bias", "persists": "#evilsprite_persistent_spawning" }
+addSpawnTableSingleEntry => { "tableName": "HDCore.DeadDoomImpReplaces", "name": "EvilSprite", "weight": "#evilsprite_zombieman_spawn_bias", "persists": "#evilsprite_persistent_spawning" }
+addSpawnTableSingleEntry => { "tableName": "HDCore.DeadDemonReplaces", "name": "EvilSprite", "weight": "#evilsprite_zombieman_spawn_bias", "persists": "#evilsprite_persistent_spawning" }
+
+// Gib Monster Spawn Entries
+addSpawnTableSingleEntry => { "tableName": "HDCore.HDCasingBitsReplaces", "name": "DoggySpawner", "weight": "#gibmonster_casings_spawn_bias", "persists": "#gibmonster_persistent_spawning" }
+addSpawnTableSingleEntry => { "tableName": "HDCore.HDGoreBitsReplaces", "name": "DoggySpawner", "weight": "#gibmonster_gore_spawn_bias", "persists": "#gibmonster_persistent_spawning" }
+addSpawnTableSingleEntry => { "tableName": "HDCore.DeadDoomImpReplaces", "name": "DoggySpawner", "weight": "#gibmonster_deadimp_spawn_bias", "persists": "#gibmonster_persistent_spawning" }
+addSpawnTableSingleEntry => { "tableName": "HDCore.DeadDemonReplaces", "name": "DoggySpawner", "weight": "#gibmonster_deaddemon_spawn_bias", "persists": "#gibmonster_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "CyberGibs", "tableName": "Critters.GibMonsterSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.GibMonsterSpawns", "name": "GibMonster", "chance": "#gibmonster_cybergibs_spawn_bias", "persists": "true" }
+
+// Ghoul Spawn Entries
+addSpawnTableSingleEntry => { "tableName": "HDCore.LostSoulReplaces", "name": "HDGhoul", "weight": "#ghoul_lostsoul_spawn_bias", "persists": "#ghoul_persistent_spawning" }
+
+// Rat Spawn Entries
+newSpawnTable => { "spawnName": "DeadZombieStormtrooper", "tableName": "Critters.DeadZombieStormTrooperRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.DeadZombieStormTrooperRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "DeadZombieAutoStormtrooper", "tableName": "Critters.DeadZombieAutoStormtrooperRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.DeadZombieAutoStormtrooperRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "DeadZombieSemiStormtrooper", "tableName": "Critters.DeadZombieSemiStormtrooperRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.DeadZombieSemiStormtrooperRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "DeadZombieSMGStormtrooper", "tableName": "Critters.DeadZombieSMGStormtrooperRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.DeadZombieSMGStormtrooperRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "DeadJackboot", "tableName": "Critters.DeadJackbootRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.DeadJackbootRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "DeadJackAndJillboot", "tableName": "Critters.DeadJackAndJillbootRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.DeadJackAndJillbootRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "DeadUndeadJackbootman", "tableName": "Critters.DeadUndeadJackbootmanRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.DeadUndeadJackbootmanRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "DeadZombieShotgunner", "tableName": "Critters.DeadZombieShotgunnerRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.DeadZombieShotgunnerRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "DeadFighterImp", "tableName": "Critters.DeadFighterImpRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.DeadFighterImpRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "DeadHealerImp", "tableName": "Critters.DeadHealerImpRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.DeadHealerImpRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "DeadMageImp", "tableName": "Critters.DeadMageImpRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.DeadMageImpRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "DeadBabuin", "tableName": "Critters.DeadBabuinRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.DeadBabuinRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "DeadSpecBabuin", "tableName": "Critters.DeadSpecBabuinRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.DeadSpecBabuinRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "DeadSpectre", "tableName": "Critters.DeadSpectreRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.DeadSpectreRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "DeadFlyZapper", "tableName": "Critters.DeadFlyZapperRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.DeadFlyZapperRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "DeadBabuinito", "tableName": "Critters.DeadBabuinitoRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.DeadBabuinitoRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "DeadSpecBabuinito", "tableName": "Critters.DeadSpecBabuinitoRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.DeadSpecBabuinitoRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "PistolZombiemanCorpse", "tableName": "Critters.PistolZombiemanCorpseRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.PistolZombiemanCorpseRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "SawnoffZombiemanCorpse", "tableName": "Critters.SawnoffZombiemanCorpseRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.SawnoffZombiemanCorpseRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "Dead_ZombieLadyCleaver", "tableName": "Critters.Dead_ZombieLadyCleaverRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.Dead_ZombieLadyCleaverRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "Dead_ZombieLadyKnife", "tableName": "Critters.Dead_ZombieLadyKnifeRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.Dead_ZombieLadyKnifeRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "Dead_ZombieLadySyringe", "tableName": "Critters.Dead_ZombieLadySyringeRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.Dead_ZombieLadySyringeRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "Dead_ZombieLadyWrench", "tableName": "Critters.Dead_ZombieLadyWrenchRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.Dead_ZombieLadyWrenchRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "Dead_ZombieAxe", "tableName": "Critters.Dead_ZombieAxeRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.Dead_ZombieAxeRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "Dead_ZombieChainsaw", "tableName": "Critters.Dead_ZombieChainsawRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.Dead_ZombieChainsawRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "Dead_ZombieCrowbar", "tableName": "Critters.Dead_ZombieCrowbarRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.Dead_ZombieCrowbarRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "Dead_ZombieHammer", "tableName": "Critters.Dead_ZombieHammerRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.Dead_ZombieHammerRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "DeadCombatJackboot", "tableName": "Critters.DeadCombatJackbootRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.DeadCombatJackbootRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "DeadDoomedJackboot", "tableName": "Critters.DeadDoomedJackbootRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.DeadDoomedJackbootRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "DeadDoomedJackAndJillboot", "tableName": "Critters.DeadDoomedJackAndJillbootRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.DeadDoomedJackAndJillbootRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "DeadDoomedZombieShotgunner", "tableName": "Critters.DeadDoomedZombieShotgunnerRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.DeadDoomedZombieShotgunnerRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "DeadRiotCopZombie", "tableName": "Critters.DeadRiotCopZombieRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.DeadRiotCopZombieRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "DeadZombieDog", "tableName": "Critters.DeadZombieDogRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.DeadZombieDogRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "DeadSpecZombieDog", "tableName": "Critters.DeadSpecZombieDogRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.DeadSpecZombieDogRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "DeadRifleman", "tableName": "Critters.DeadRiflemanRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.DeadRiflemanRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "ReallyDeadRifleman", "tableName": "Critters.ReallyDeadRiflemanRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.ReallyDeadRiflemanRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "DeadRiflemanCrouched", "tableName": "Critters.DeadRiflemanCrouchedRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.DeadRiflemanCrouchedRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "ReallyDeadRiflemanCrouched", "tableName": "Critters.ReallyDeadRiflemanCrouchedRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.ReallyDeadRiflemanCrouchedRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "HDHeadsStickBase", "tableName": "Critters.HDHeadsStickBaseRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.HDHeadsStickBaseRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "HDHeadsStickOld", "tableName": "Critters.HDHeadsStickOldRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.HDHeadsStickOldRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "HDHeadStickBase", "tableName": "Critters.HDHeadStickBaseRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.HDHeadStickBaseRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "HDHeadStickBlack", "tableName": "Critters.HDHeadStickBlackRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.HDHeadStickBlackRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "HDHeadStickOld", "tableName": "Critters.HDHeadStickOldRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.HDHeadStickOldRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "HDHeadStick", "tableName": "Critters.HDHeadStickRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.HDHeadStickRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "HDTwitchStick", "tableName": "Critters.HDTwitchStickRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.HDTwitchStickRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "HDTwitchHang", "tableName": "Critters.HDTwitchHangRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.HDTwitchHangRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "HDTwitchHangNS", "tableName": "Critters.HDTwitchHangNSRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.HDTwitchHangNSRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "HDHTNoGuts", "tableName": "Critters.HDHTNoGutsRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.HDHTNoGutsRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "HDHTLkDown", "tableName": "Critters.HDHTLkDownRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.HDHTLkDownRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "HDHTLkUp", "tableName": "Critters.HDHTLkUpRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.HDHTLkUpRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "HDHTNoBrain", "tableName": "Critters.HDHTNoBrainRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.HDHTNoBrainRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "HDHTSkull", "tableName": "Critters.HDHTSkullRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.HDHTSkullRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "HDMt2", "tableName": "Critters.HDMt2RatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.HDMt2RatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "HDMt3", "tableName": "Critters.HDMt3RatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.HDMt3RatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "HDMt4", "tableName": "Critters.HDMt4RatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.HDMt4RatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "HDMt5", "tableName": "Critters.HDMt5RatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.HDMt5RatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "HDMt2NS", "tableName": "Critters.HDMt2NSRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.HDMt2NSRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "HDMt3NS", "tableName": "Critters.HDMt3NSRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.HDMt3NSRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "HDMt4NS", "tableName": "Critters.HDMt4NSRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.HDMt4NSRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+newSpawnTable => { "spawnName": "HDMt5NS", "tableName": "Critters.HDMt5NSRatSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "Critters.HDMt5NSRatSpawns", "name": "RatSpawner", "chance": "#rat_corpse_spawn_bias", "persists": "#rat_persistent_spawning" }
+
+// Shock Imp Spawn Entries
+addSpawnTableSingleEntry => { "tableName": "HDCore.DoomImpReplaces", "name": "ShockImp", "weight": "#shockimp_spawn_bias", "persists": "#shockimp_persistent_spawning" }
+
+// Still Alive Stick Spawn Entries
+addSpawnTableSingleEntry => { "tableName": "HDCore.LiveStickReplaces", "name": "StillAliveStick", "weight": "#stillalive_spawn_bias", "persists": "#stillalive_persistent_spawning" }
+
+// Withered Spawn Entries
+// newSpawnTable => { "spawnName": "WitheredRandom", "tableName": "Critters.WitheredRandom" }
+// addSpawnTableSingleEntry => { "tableName": "Critters.WitheredRandom", "name": "Withered", "weight": "19", "persists": "true" }
+// addSpawnTableSingleEntry => { "tableName": "Critters.WitheredRandom", "name": "WitheredSummoner", "weight": "1", "persists": "true" }
+
+addSpawnTableSingleEntry => { "tableName": "HDCore.ZombieManReplaces", "name": "WitheredSpawner", "weight": "#withered_zombieman_spawn_bias", "persists": "#withered_persistent_spawning" }
+addSpawnTableSingleEntry => { "tableName": "HDCore.ShotgunGuyReplaces", "name": "WitheredSpawner", "weight": "#withered_shotgunguy_spawn_bias", "persists": "#withered_persistent_spawning" }
+addSpawnTableSingleEntry => { "tableName": "HDCore.DoomImpReplaces", "name": "WitheredSpawner", "weight": "#withered_imp_spawn_bias", "persists": "#withered_persistent_spawning" }
+addSpawnTableSingleEntry => { "tableName": "HDCore.DemonReplaces", "name": "WitheredSpawner", "weight": "#withered_demon_spawn_bias", "persists": "#withered_persistent_spawning" }
+
+addSpawnTableSingleEntry => { "tableName": "HDCore.HDCasingBitsReplaces", "name": "WitheredSpawner", "weight": "#withered_casings_spawn_bias", "persists": "#withered_persistent_spawning" }
+addSpawnTableSingleEntry => { "tableName": "HDCore.HDGoreBitsReplaces", "name": "WitheredSpawner", "weight": "#withered_gore_spawn_bias", "persists": "#withered_persistent_spawning" }
+
+addSpawnTableSingleEntry => { "tableName": "HDCore.DeadZombieManReplaces", "name": "WitheredSpawner", "weight": "#withered_deadzombieman_spawn_bias", "persists": "#withered_persistent_spawning" }
+addSpawnTableSingleEntry => { "tableName": "HDCore.DeadShotgunGuyReplaces", "name": "WitheredSpawner", "weight": "#withered_deadshotgunguy_spawn_bias", "persists": "#withered_persistent_spawning" }
+addSpawnTableSingleEntry => { "tableName": "HDCore.DeadDoomImpReplaces", "name": "WitheredSpawner", "weight": "#withered_deadimp_spawn_bias", "persists": "#withered_persistent_spawning" }
+addSpawnTableSingleEntry => { "tableName": "HDCore.DeadDemonReplaces", "name": "WitheredSpawner", "weight": "#withered_deaddemon_spawn_bias", "persists": "#withered_persistent_spawning" }

@@ -12,6 +12,3 @@ version "4.11"
 
 // Spawners
 #include "zscript/CoolKing1234/critters/Spawners.zs"
-
-// Spawn Handler
-#include "zscript/CoolKing1234/critters/SpawnHandler.zs"
