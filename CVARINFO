@@ -1,44 +1,44 @@
-server bool sv_giblingsize;
+server bool  sv_giblingsize;
 
-server int  doggy_zombieman_spawn_bias         = 99;
-server int  doggy_shotgunguy_spawn_bias        = 49;
-server int  doggy_demon_spawn_bias             = 24;
-server bool doggy_persistent_spawning          = false;
+server float doggy_zombieman_spawn_bias         = 14.5;
+server float doggy_shotgunguy_spawn_bias        = 4.52;
+server float doggy_demon_spawn_bias             = 0.8;
+server bool  doggy_persistent_spawning          = false;
 
-server int  evilsprite_lostsoul_spawn_bias     = 14;
-server int  evilsprite_casings_spawn_bias      = 4;
-server int  evilsprite_gore_spawn_bias         = 99;
-server int  evilsprite_deadimp_spawn_bias      = 14;
-server int  evilsprite_deaddemon_spawn_bias    = 9;
-server bool evilsprite_persistent_spawning     = false;
+server float evilsprite_lostsoul_spawn_bias     = 0.0666;
+server float evilsprite_casings_spawn_bias      = 8.2;
+server float evilsprite_gore_spawn_bias         = 0.87;
+server float evilsprite_deadimp_spawn_bias      = 0.666;
+server float evilsprite_deaddemon_spawn_bias    = 0.8;
+server bool  evilsprite_persistent_spawning     = false;
 
-server int  ghoul_lostsoul_spawn_bias = 14;
-server bool ghoul_persistent_spawning = false;
+server float ghoul_lostsoul_spawn_bias          = 0.0666;
+server bool  ghoul_persistent_spawning          = false;
 
-server int  gibmonster_casings_spawn_bias      = 4;
-server int  gibmonster_gore_spawn_bias         = 49;
-server int  gibmonster_deadimp_spawn_bias      = 9;
-server int  gibmonster_deaddemon_spawn_bias    = 4;
-server int  gibmonster_cybergibs_spawn_bias    = 4;
-server bool gibmonster_persistent_spawning     = false;
+server float gibmonster_casings_spawn_bias      = 8.2;
+server float gibmonster_gore_spawn_bias         = 1.74;
+server float gibmonster_deadimp_spawn_bias      = 1;
+server float gibmonster_deaddemon_spawn_bias    = 1.6;
+server float gibmonster_cybergibs_spawn_bias    = 50;
+server bool  gibmonster_persistent_spawning     = false;
 
-server int  rat_corpse_spawn_bias              = 14;
-server bool rat_persistent_spawning            = false;
+server float rat_corpse_spawn_bias              = 17;
+server bool  rat_persistent_spawning            = false;
 
-server int  shockimp_spawn_bias                = 19;
-server bool shockimp_persistent_spawning       = false;
+server float shockimp_spawn_bias                = 0.5;
+server bool  shockimp_persistent_spawning       = false;
 
-server int  stillalive_spawn_bias              = 14;
-server bool stillalive_persistent_spawning     = false;
+server float stillalive_spawn_bias              = 0.0666;
+server bool  stillalive_persistent_spawning     = false;
 
-server int  withered_zombieman_spawn_bias      = 49;
-server int  withered_shotgunguy_spawn_bias     = 24;
-server int  withered_imp_spawn_bias            = 99;
-server int  withered_demon_spawn_bias          = 49;
-server int  withered_casings_spawn_bias        = 4;
-server int  withered_gore_spawn_bias           = 99;
-server int  withered_deadzombieman_spawn_bias  = 14;
-server int  withered_deadshotgunguy_spawn_bias = 14;
-server int  withered_deadimp_spawn_bias        = 14;
-server int  withered_deaddemon_spawn_bias      = 9;
-server bool withered_persistent_spawning       = false;
+server float withered_zombieman_spawn_bias      = 2.9;
+server float withered_shotgunguy_spawn_bias     = 9.04;
+server float withered_imp_spawn_bias            = 0.1;
+server float withered_demon_spawn_bias          = 0.4;
+server float withered_casings_spawn_bias        = 8.2;
+server float withered_gore_spawn_bias           = 0.87;
+server float withered_deadzombieman_spawn_bias  = 0.0666;
+server float withered_deadshotgunguy_spawn_bias = 0.0666;
+server float withered_deadimp_spawn_bias        = 0.666;
+server float withered_deaddemon_spawn_bias      = 0.8;
+server bool  withered_persistent_spawning       = false;
