@@ -1,6 +1,3 @@
-GameInfo { 	AddEventHandlers = "CrittersHandler" } 
-
-
 DoomEdNums{
 	23411=Withered
 	23412=EvilSprite
