@@ -26,3 +26,5 @@ class WitheredRandom : RandomSpawner {
         DropItem 'WitheredSummoner', 256, 1;
     }
 }
+
+class WitheredSummonSpawner : DummySpawner {}
