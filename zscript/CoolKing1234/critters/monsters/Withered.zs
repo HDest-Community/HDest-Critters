@@ -138,21 +138,23 @@ class WitheredSummoner : Withered {
 
 Class WitheredSummonerSeeker : Actor {
 
-    Array<Name> summonables;
+    // Array<Name> summonables;
 
-    override void PostBeginPlay() {
-        Name classes[] = {
-            'WitheredRandom',
-            'ZombieScientistRandom',
-            'MeleeZombie'
-        };
+    // override void PostBeginPlay() {
+    //     Name classes[] = {
+    //         'WitheredRandom',
+    //         'ZombieScientistRandom',
+    //         'MeleeZombie',
+    //         'BrawlerJackboot',
+    //         'BayonetRifleman'
+    //     };
 
-        foreach (cls : classes) {
-            if ((Class<Actor>)(cls)) {
-                summonables.push(cls);
-            }
-        }
-    }
+    //     foreach (cls : classes) {
+    //         if ((Class<Actor>)(cls)) {
+    //             summonables.push(cls);
+    //         }
+    //     }
+    // }
 
     default {
         +THRUACTORS
@@ -179,7 +181,8 @@ Class WitheredSummonerSeeker : Actor {
             TNT1 A 0 A_Jump(5, "Die");
             loop;
         Create:
-            TNT1 A 0 A_StartSound(Spawn(summonables[random(0, summonables.Size() - 1)], pos).activesound);
+            // TNT1 A 0 A_StartSound(Spawn(summonables[random(0, summonables.Size() - 1)], pos).activesound);
+            TNT1 A 0 A_StartSound(Spawn('WitheredSummonSpawner', pos).activesound);
         Die:
             stop;
     }
