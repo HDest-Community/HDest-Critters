@@ -214,9 +214,9 @@ addSpawnTableSingleEntry => { "tableName": "DoomImpReplaces", "name": "ShockImp"
 addSpawnTableSingleEntry => { "tableName": "LiveStickReplaces", "name": "StillAliveStick", "weight": "#stillalive_spawn_bias", "persists": "#stillalive_persistent_spawning" }
 
 // Withered Spawn Entries
-// newSpawnTable => { "spawnName": "WitheredRandom", "tableName": "Critters.WitheredRandom" }
-// addSpawnTableSingleEntry => { "tableName": "Critters.WitheredRandom", "name": "Withered", "weight": "19", "persists": "true", "replaces": "false" }
-// addSpawnTableSingleEntry => { "tableName": "Critters.WitheredRandom", "name": "WitheredSummoner", "weight": "1", "persists": "true", "replaces": "false" }
+newSpawnTable => { "spawnName": "WitheredRandom" }
+addSpawnTableSingleEntry => { "tableName": "WitheredRandom", "name": "Withered", "weight": "19", "persists": "true", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "WitheredRandom", "name": "WitheredSummoner", "weight": "1", "persists": "true", "replaces": "false" }
 
 addSpawnTableSingleEntry => { "tableName": "ZombieManReplaces", "name": "WitheredSpawner", "weight": "#withered_zombieman_spawn_bias", "persists": "#withered_persistent_spawning" }
 addSpawnTableSingleEntry => { "tableName": "ShotgunGuyReplaces", "name": "WitheredSpawner", "weight": "#withered_shotgunguy_spawn_bias", "persists": "#withered_persistent_spawning" }

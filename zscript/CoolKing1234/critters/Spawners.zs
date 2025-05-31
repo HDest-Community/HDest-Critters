@@ -20,11 +20,6 @@ class WitheredSpawner : ClusterSpawner {
     }
 }
 
-class WitheredRandom : RandomSpawner {
-    default {
-        DropItem 'Withered', 256, 19;
-        DropItem 'WitheredSummoner', 256, 1;
-    }
-}
+class WitheredRandom : DummySpawner {}
 
 class WitheredSummonSpawner : DummySpawner {}
