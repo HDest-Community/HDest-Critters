@@ -39,13 +39,13 @@ OptionMenu DoggySpawns
 
     StaticText "$MENU_MONSPAWNOPTIONS", "Yellow"
     StaticText "$MENU_DOGGY_ZOMBIEMAN_SPAWNTEXT", "White"
-    Slider "$MENU_SPAWNRATE", "doggy_zombieman_spawn_bias",  0.0, 1000, .01, 3
+    Slider "$MENU_SPAWNRATE", "doggy_zombieman_spawn_bias", 0.0, 100, .01, 2
     SafeCommand "$MENU_RESETMONSTER", "resetcvar doggy_zombieman_spawn_bias"
     StaticText "$MENU_DOGGY_SHOTGUNGUY_SPAWNTEXT", "White"
-    Slider "$MENU_SPAWNRATE", "doggy_shotgunguy_spawn_bias",  0.0, 1000, .01, 3
+    Slider "$MENU_SPAWNRATE", "doggy_shotgunguy_spawn_bias", 0.0, 100, .01, 2
     SafeCommand "$MENU_RESETMONSTER", "resetcvar doggy_shotgunguy_spawn_bias"
     StaticText "$MENU_DOGGY_DEMON_SPAWNTEXT", "White"
-    Slider "$MENU_SPAWNRATE", "doggy_demon_spawn_bias",  0.0, 1000, .01, 3
+    Slider "$MENU_SPAWNRATE", "doggy_demon_spawn_bias", 0.0, 100, .01, 2
     SafeCommand "$MENU_RESETMONSTER", "resetcvar doggy_demon_spawn_bias"
     StaticText ""
 
@@ -71,19 +71,19 @@ OptionMenu EvilSpriteSpawns
 
     StaticText "$MENU_MONSPAWNOPTIONS", "Yellow"
     StaticText "$MENU_EVILSPRITE_LOSTSOUL_SPAWNTEXT", "White"
-    Slider "$MENU_SPAWNRATE", "evilsprite_lostsoul_spawn_bias",  0.0, 1000, .01, 3
+    Slider "$MENU_SPAWNRATE", "evilsprite_lostsoul_spawn_bias", 0.0, 100, .01, 2
     SafeCommand "$MENU_RESETMONSTER", "resetcvar evilsprite_lostsoul_spawn_bias"
     StaticText "$MENU_EVILSPRITE_CASINGS_SPAWNTEXT", "White"
-    Slider "$MENU_SPAWNRATE", "evilsprite_casings_spawn_bias",  0.0, 1000, .01, 3
+    Slider "$MENU_SPAWNRATE", "evilsprite_casings_spawn_bias", 0.0, 100, .01, 2
     SafeCommand "$MENU_RESETMONSTER", "resetcvar evilsprite_casings_spawn_bias"
     StaticText "$MENU_EVILSPRITE_GORE_SPAWNTEXT", "White"
-    Slider "$MENU_SPAWNRATE", "evilsprite_gore_spawn_bias",  0.0, 1000, .01, 3
+    Slider "$MENU_SPAWNRATE", "evilsprite_gore_spawn_bias", 0.0, 100, .01, 2
     SafeCommand "$MENU_RESETMONSTER", "resetcvar evilsprite_gore_spawn_bias"
     StaticText "$MENU_EVILSPRITE_DEADIMP_SPAWNTEXT", "White"
-    Slider "$MENU_SPAWNRATE", "evilsprite_deadimp_spawn_bias",  0.0, 1000, .01, 3
+    Slider "$MENU_SPAWNRATE", "evilsprite_deadimp_spawn_bias", 0.0, 100, .01, 2
     SafeCommand "$MENU_RESETMONSTER", "resetcvar evilsprite_deadimp_spawn_bias"
     StaticText "$MENU_EVILSPRITE_DEADDEMON_SPAWNTEXT", "White"
-    Slider "$MENU_SPAWNRATE", "evilsprite_deaddemon_spawn_bias",  0.0, 1000, .01, 3
+    Slider "$MENU_SPAWNRATE", "evilsprite_deaddemon_spawn_bias", 0.0, 100, .01, 2
     SafeCommand "$MENU_RESETMONSTER", "resetcvar evilsprite_deaddemon_spawn_bias"
     StaticText ""
 
@@ -109,7 +109,7 @@ OptionMenu GhoulSpawns
 
     StaticText "$MENU_MONSPAWNOPTIONS", "Yellow"
     StaticText "$MENU_GHOUL_SPAWNTEXT", "White"
-    Slider "$MENU_SPAWNRATE", "ghoul_lostsoul_spawn_bias",  0.0, 1000, .01, 3
+    Slider "$MENU_SPAWNRATE", "ghoul_lostsoul_spawn_bias", 0.0, 100, .01, 2
     SafeCommand "$MENU_RESETMONSTER", "resetcvar ghoul_lostsoul_spawn_bias"
     StaticText ""
 
@@ -135,21 +135,21 @@ OptionMenu GibMonsterSpawns
 
     StaticText "$MENU_MONSPAWNOPTIONS", "Yellow"
     StaticText "$MENU_GIBMONSTER_CASINGS_SPAWNTEXT", "White"
-    Slider "$MENU_SPAWNRATE", "gibmonster_casings_spawn_bias",  0.0, 1000, .01, 3
+    Slider "$MENU_SPAWNRATE", "gibmonster_casings_spawn_bias", 0.0, 100, .01, 2
     SafeCommand "$MENU_RESETMONSTER", "resetcvar gibmonster_casings_spawn_bias"
     StaticText "$MENU_GIBMONSTER_GORE_SPAWNTEXT", "White"
-    Slider "$MENU_SPAWNRATE", "gibmonster_gore_spawn_bias",  0.0, 1000, .01, 3
+    Slider "$MENU_SPAWNRATE", "gibmonster_gore_spawn_bias", 0.0, 100, .01, 2
     SafeCommand "$MENU_RESETMONSTER", "resetcvar gibmonster_gore_spawn_bias"
     StaticText "$MENU_GIBMONSTER_DEADIMP_SPAWNTEXT", "White"
-    Slider "$MENU_SPAWNRATE", "gibmonster_deadimp_spawn_bias",  0.0, 1000, .01, 3
+    Slider "$MENU_SPAWNRATE", "gibmonster_deadimp_spawn_bias", 0.0, 100, .01, 2
     SafeCommand "$MENU_RESETMONSTER", "resetcvar gibmonster_deadimp_spawn_bias"
     StaticText "$MENU_GIBMONSTER_DEADDEMON_SPAWNTEXT", "White"
-    Slider "$MENU_SPAWNRATE", "gibmonster_deaddemon_spawn_bias",  0.0, 1000, .01, 3
+    Slider "$MENU_SPAWNRATE", "gibmonster_deaddemon_spawn_bias", 0.0, 100, .01, 2
     SafeCommand "$MENU_RESETMONSTER", "resetcvar gibmonster_deaddemon_spawn_bias"
     StaticText ""
 
     StaticText "$MENU_GIBMONSTER_CYBERGIBS_SPAWNTEXT", "White"
-    Slider "$MENU_SPAWNRATE", "gibmonster_cybergibs_spawn_bias",  0.0, 1000, .01, 3
+    Slider "$MENU_SPAWNRATE", "gibmonster_cybergibs_spawn_bias", 0.0, 100, .01, 2
     SafeCommand "$MENU_RESETMONSTER", "resetcvar gibmonster_cybergibs_spawn_bias"
     StaticText ""
 
@@ -175,7 +175,7 @@ OptionMenu RatSpawns
 
     StaticText "$MENU_MONSPAWNOPTIONS", "Yellow"
     StaticText "$MENU_RAT_SPAWNTEXT", "White"
-    Slider "$MENU_SPAWNRATE", "rat_corpse_spawn_bias",  0.0, 1000, .01, 3
+    Slider "$MENU_SPAWNRATE", "rat_corpse_spawn_bias", 0.0, 100, .01, 2
     SafeCommand "$MENU_RESETMONSTER", "resetcvar rat_corpse_spawn_bias"
     StaticText ""
 
@@ -201,7 +201,7 @@ OptionMenu ShockImpSpawns
 
     StaticText "$MENU_MONSPAWNOPTIONS", "Yellow"
     StaticText "$MENU_SHIMP_SPAWNTEXT", "White"
-    Slider "$MENU_SPAWNRATE", "shockimp_spawn_bias",  0.0, 1000, .01, 3
+    Slider "$MENU_SPAWNRATE", "shockimp_spawn_bias", 0.0, 100, .01, 2
     SafeCommand "$MENU_RESETMONSTER", "resetcvar shockimp_spawn_bias"
     StaticText ""
 
@@ -227,7 +227,7 @@ OptionMenu StillAliveSpawns
 
     StaticText "$MENU_MONSPAWNOPTIONS", "Yellow"
     StaticText "$MENU_STILLALIVE_SPAWNTEXT", "White"
-    Slider "$MENU_SPAWNRATE", "stillalive_spawn_bias",  0.0, 1000, .01, 3
+    Slider "$MENU_SPAWNRATE", "stillalive_spawn_bias", 0.0, 100, .01, 2
     SafeCommand "$MENU_RESETMONSTER", "resetcvar stillalive_spawn_bias"
     StaticText ""
 
@@ -253,34 +253,34 @@ OptionMenu WitheredSpawns
 
     StaticText "$MENU_MONSPAWNOPTIONS", "Yellow"
     StaticText "$MENU_WITHERED_ZOMBIEMAN_SPAWNTEXT", "White"
-    Slider "$MENU_SPAWNRATE", "withered_zombieman_spawn_bias",  0.0, 1000, .01, 3
+    Slider "$MENU_SPAWNRATE", "withered_zombieman_spawn_bias", 0.0, 100, .01, 2
     SafeCommand "$MENU_RESETMONSTER", "resetcvar withered_zombieman_spawn_bias"
     StaticText "$MENU_WITHERED_SHOTGUNGUY_SPAWNTEXT", "White"
-    Slider "$MENU_SPAWNRATE", "withered_shotgunguy_spawn_bias",  0.0, 1000, .01, 3
+    Slider "$MENU_SPAWNRATE", "withered_shotgunguy_spawn_bias", 0.0, 100, .01, 2
     SafeCommand "$MENU_RESETMONSTER", "resetcvar withered_shotgunguy_spawn_bias"
     StaticText "$MENU_WITHERED_IMP_SPAWNTEXT", "White"
-    Slider "$MENU_SPAWNRATE", "withered_imp_spawn_bias",  0.0, 1000, .01, 3
+    Slider "$MENU_SPAWNRATE", "withered_imp_spawn_bias", 0.0, 100, .01, 2
     SafeCommand "$MENU_RESETMONSTER", "resetcvar withered_imp_spawn_bias"
     StaticText "$MENU_WITHERED_DEMON_SPAWNTEXT", "White"
-    Slider "$MENU_SPAWNRATE", "withered_demon_spawn_bias",  0.0, 1000, .01, 3
+    Slider "$MENU_SPAWNRATE", "withered_demon_spawn_bias", 0.0, 100, .01, 2
     SafeCommand "$MENU_RESETMONSTER", "resetcvar withered_demon_spawn_bias"
     StaticText "$MENU_WITHERED_CASINGS_SPAWNTEXT", "White"
-    Slider "$MENU_SPAWNRATE", "withered_casings_spawn_bias",  0.0, 1000, .01, 3
+    Slider "$MENU_SPAWNRATE", "withered_casings_spawn_bias", 0.0, 100, .01, 2
     SafeCommand "$MENU_RESETMONSTER", "resetcvar withered_casings_spawn_bias"
     StaticText "$MENU_WITHERED_GORE_SPAWNTEXT", "White"
-    Slider "$MENU_SPAWNRATE", "withered_gore_spawn_bias",  0.0, 1000, .01, 3
+    Slider "$MENU_SPAWNRATE", "withered_gore_spawn_bias", 0.0, 100, .01, 2
     SafeCommand "$MENU_RESETMONSTER", "resetcvar withered_gore_spawn_bias"
     StaticText "$MENU_WITHERED_DEADZOMBIEMAN_SPAWNTEXT", "White"
-    Slider "$MENU_SPAWNRATE", "withered_deadzombieman_spawn_bias",  0.0, 1000, .01, 3
+    Slider "$MENU_SPAWNRATE", "withered_deadzombieman_spawn_bias", 0.0, 100, .01, 2
     SafeCommand "$MENU_RESETMONSTER", "resetcvar withered_deadzombieman_spawn_bias"
     StaticText "$MENU_WITHERED_DEADSHOTGUNGUY_SPAWNTEXT", "White"
-    Slider "$MENU_SPAWNRATE", "withered_deadshotgunguy_spawn_bias",  0.0, 1000, .01, 3
+    Slider "$MENU_SPAWNRATE", "withered_deadshotgunguy_spawn_bias", 0.0, 100, .01, 2
     SafeCommand "$MENU_RESETMONSTER", "resetcvar withered_deadshotgunguy_spawn_bias"
     StaticText "$MENU_WITHERED_DEADIMP_SPAWNTEXT", "White"
-    Slider "$MENU_SPAWNRATE", "withered_deadimp_spawn_bias",  0.0, 1000, .01, 3
+    Slider "$MENU_SPAWNRATE", "withered_deadimp_spawn_bias", 0.0, 100, .01, 2
     SafeCommand "$MENU_RESETMONSTER", "resetcvar withered_deadimp_spawn_bias"
     StaticText "$MENU_WITHERED_DEADDEMON_SPAWNTEXT", "White"
-    Slider "$MENU_SPAWNRATE", "withered_deaddemon_spawn_bias",  0.0, 1000, .01, 3
+    Slider "$MENU_SPAWNRATE", "withered_deaddemon_spawn_bias", 0.0, 100, .01, 2
     SafeCommand "$MENU_RESETMONSTER", "resetcvar withered_deaddemon_spawn_bias"
     StaticText ""
 
