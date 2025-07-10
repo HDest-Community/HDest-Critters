@@ -233,8 +233,3 @@ addSpawnTableSingleEntry => { "tableName": "DeadDemonReplaces", "name": "Withere
 
 newSpawnTable => { "spawnName": "WitheredSummonSpawner" }
 addSpawnTableSingleEntry => { "tableName": "WitheredSummonSpawner", "name": "WitheredRandom", "persists": "true" }
-
-// TODO: Remove once Radtech Zombies defines these itself
-addSpawnTableSingleEntry => { "tableName": "WitheredSummonSpawner", "name": "MeleeZombie", "persists": "true" }
-// addSpawnTableSingleEntry => { "tableName": "WitheredSummonSpawner", "name": "BrawlerJackboot", "persists": "true" }
-// addSpawnTableSingleEntry => { "tableName": "WitheredSummonSpawner", "name": "BayonetRifleman", "persists": "true" }
