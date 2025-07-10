@@ -178,7 +178,7 @@ class Rat : HDMobBase {
             goto See;
 
         Pain:
-            #### # 0 A_PlaySound(painsound);
+            #### # 0 A_Vocalize(painsound);
             goto See;
 
         Death:
