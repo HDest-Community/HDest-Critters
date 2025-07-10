@@ -15,10 +15,10 @@ addSpawnTableSingleEntry => { "tableName": "DeadDoomImpReplaces", "name": "EvilS
 addSpawnTableSingleEntry => { "tableName": "DeadDemonReplaces", "name": "EvilSprite", "weight": "#evilsprite_deaddemon_spawn_bias", "persists": "#evilsprite_persistent_spawning" }
 
 // Gib Monster Spawn Entries
-addSpawnTableSingleEntry => { "tableName": "HDCasingBits", "name": "DoggySpawner", "weight": "#gibmonster_casings_spawn_bias", "persists": "#gibmonster_persistent_spawning" }
-addSpawnTableSingleEntry => { "tableName": "HDGoreBits", "name": "DoggySpawner", "weight": "#gibmonster_gore_spawn_bias", "persists": "#gibmonster_persistent_spawning" }
-addSpawnTableSingleEntry => { "tableName": "DeadDoomImpReplaces", "name": "DoggySpawner", "weight": "#gibmonster_deadimp_spawn_bias", "persists": "#gibmonster_persistent_spawning" }
-addSpawnTableSingleEntry => { "tableName": "DeadDemonReplaces", "name": "DoggySpawner", "weight": "#gibmonster_deaddemon_spawn_bias", "persists": "#gibmonster_persistent_spawning" }
+addSpawnTableSingleEntry => { "tableName": "HDCasingBits", "name": "GibMonster", "weight": "#gibmonster_casings_spawn_bias", "persists": "#gibmonster_persistent_spawning" }
+addSpawnTableSingleEntry => { "tableName": "HDGoreBits", "name": "GibMonster", "weight": "#gibmonster_gore_spawn_bias", "persists": "#gibmonster_persistent_spawning" }
+addSpawnTableSingleEntry => { "tableName": "DeadDoomImpReplaces", "name": "GibMonster", "weight": "#gibmonster_deadimp_spawn_bias", "persists": "#gibmonster_persistent_spawning" }
+addSpawnTableSingleEntry => { "tableName": "DeadDemonReplaces", "name": "GibMonster", "weight": "#gibmonster_deaddemon_spawn_bias", "persists": "#gibmonster_persistent_spawning" }
 
 newSpawnTable => { "spawnName": "CyberGibs", "tableName": "Critters.GibMonsterSpawns", "replaces": "false" }
 addSpawnTableSingleEntry => { "tableName": "Critters.GibMonsterSpawns", "name": "GibMonster", "chance": "#gibmonster_cybergibs_spawn_bias", "persists": "true", "replaces": "false" }
