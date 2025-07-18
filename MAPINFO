@@ -2,8 +2,8 @@ GameInfo { 	AddEventHandlers = "CrittersHandler" }
 
 
 DoomEdNums{
-	23401=Withered
-	23402=EvilSprite
-	23403=GibMonster
-	23404=Doggy
+	23411=Withered
+	23412=EvilSprite
+	23413=GibMonster
+	23414=Doggy
 }
