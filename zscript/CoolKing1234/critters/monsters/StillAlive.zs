@@ -3,6 +3,8 @@ class StillAliveStick : UndeadHomeboy {
     override void Tick() {
         super.Tick();
 
+		if(!self || isfrozen()) return;
+
         if (health > 0 && !random(0, 15)) {
             A_SpawnItemEx(
                 "BloodSplatSilent",

@@ -30,6 +30,8 @@ class ShockImp : FighterImp {
     override void Tick() {
         super.Tick();
 
+		if(!self || isfrozen()) return;
+
         if (health > 0 && !random(0, health)) A_ShimpZapArc();
     }
 

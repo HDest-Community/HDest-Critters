@@ -44,6 +44,8 @@ class Rat : HDMobBase {
     override void Tick() {
         super.Tick();
 
+		if(!self || isfrozen()) return;
+
         if (health) {
             let threatened = false;
             let prevThreat = threat;
