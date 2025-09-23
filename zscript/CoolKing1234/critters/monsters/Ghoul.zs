@@ -1,6 +1,8 @@
 class HDGhoul : Hatchling {
     default {
         +noblood
+        +hdmobbase.doesntbleed
+        +dontgib
 
         attacksound "Ghoul/attack";
         activesound "Ghoul/active";
