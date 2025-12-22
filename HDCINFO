@@ -233,3 +233,11 @@ addSpawnTableSingleEntry => { "tableName": "DeadDemonReplaces", "name": "Withere
 
 newSpawnTable => { "spawnName": "WitheredSummonSpawner" }
 addSpawnTableSingleEntry => { "tableName": "WitheredSummonSpawner", "name": "WitheredRandom", "persists": "true" }
+
+// Map-placed Zombie Fodder
+//  - Lost Civilization 2
+newSpawnTable => { "spawnName": "QuakeFodder" }
+addSpawnTableNestedEntry => { "tableName": "QuakeFodder", "name": "WitheredRandom", "weight": "1", "persists": "true" }
+
+newSpawnTable => { "spawnName": "ZombieFodder" }
+addSpawnTableNestedEntry => { "tableName": "ZombieFodder", "name": "WitheredRandom", "weight": "1", "persists": "true" }
