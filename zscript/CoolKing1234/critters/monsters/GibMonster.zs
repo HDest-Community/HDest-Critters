@@ -3,10 +3,30 @@
 // ------------------------------------------------------------
 class GibMonster : Babuin {
 
-    override void postbeginplay(){
-        super.postbeginplay();
+    default {
+        //$Category "Monsters/Hideous Destructor"
+        //$Title "GibMonster"
+        //$Sprite "IMHDF1"
 
-        self.meleethreshold=200;
+        translation 0;
+        
+        scale 1.0;
+        speed 8;
+        meleerange 20;
+        meleethreshold 200;
+        maxtargetrange 128;
+        painchance 200;
+        maxstepheight 32;
+        maxdropoffheight 32;
+
+        seesound "GibMonster/Sight";
+        painsound "GibMonster/Pain";
+        deathsound "GibMonster/Death";
+        activesound "GibMonster/Active";
+
+        tag "$TAG_GIBMONSTER";
+        obituary "$OB_GIBMONSTER";
+        hitobituary "$OB_GIBMONSTER_HIT";
     }
 
     //this was surprisingly easy
@@ -22,27 +42,6 @@ class GibMonster : Babuin {
                 case 1: break;
             }
         }
-    }
-
-    default {
-        //$Category "Monsters/Hideous Destructor"
-        //$Title "GibMonster"
-        //$Sprite "IMHDF1"
-
-        translation 0;
-        
-        scale 1.0;
-        speed 8;
-        meleerange 20;
-        maxtargetrange 128;
-        painchance 200;
-        maxstepheight 32;maxdropoffheight 32;
-        seesound "GibMonster/Sight";painsound "GibMonster/Pain";
-        deathsound "GibMonster/Death";activesound "GibMonster/Active";
-
-        tag "$TAG_GIBMONSTER";
-        obituary "$OB_GIBMONSTER";
-        hitobituary "$OB_GIBMONSTER_HIT";
     }
 
     states {

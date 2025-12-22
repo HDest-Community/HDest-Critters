@@ -8,12 +8,20 @@ class EvilSprite : HDMobBase {
         //$Title "Sprite"
         //$Sprite "FRITA0"
 
-        monster; +nogravity +float +floatbob
-        +avoidmelee +lookallaround
-        +pushable +dontfall +cannotpush +thruspecies
-        +hdmobbase.doesntbleed
-        -telestomp -solid
+        +nogravity
+        +float
+        +avoidmelee
+        +lookallaround
+        +pushable
+        +dontfall
+        +cannotpush
+        +thruspecies
         +dontgib
+
+        -telestomp
+        -solid
+
+        +hdmobbase.doesntbleed
 
         species "BaronOfHell";
         tag "$TAG_EVILSPRITE";

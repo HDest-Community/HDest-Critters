@@ -1,43 +1,38 @@
 class Doggy : Babuin {
 
-    override void postbeginplay(){
-        super.postbeginplay();
-
-        sprite = getspriteindex("DOG"..random(1, 5));
-        self.meleethreshold=200;
-    }
-
-    override void CheckFootStepSound(){
-        if (bplayingid) {
-			HDHumanoid.FootStepSound(self, 0.4, drysound: "Dog/Step/Dry");
-        } else if (!frame) {
-			A_StartSound("Dog/Step/Wet", 88, CHANF_OVERLAP);
-		}
-    }
-
     default {
         //$Category "Monsters/Hideous Destructor"
         //$Title "Doggy"
         //$Sprite "ROTTA2"
 
-        +cannotpush +pushable
-        
-        translation 0;
+        +cannotpush
+        +pushable
+
+        +hdmobbase.chasealert
+
+        -hdmobbase.climber
+        -hdmobbase.climbpastdropoff
         
         health 50;
         speed 18;
         mass 60;
         meleerange 50;
+        meleethreshold 200;
         maxtargetrange 128;
-        painchance 128;
-        maxstepheight 32;
-		maxdropoffheight 32;
+
+        painchance 90;
+        pushfactor 0.2;
+
+        maxstepheight 24;
+        maxdropoffheight 64;
+
+        translation 0;
         
         seesound "Dog/Sight";
-		painsound "Dog/Pain";
+        painsound "Dog/Pain";
         deathsound "Dog/Death";
-		activesound "Dog/Active";
-        
+        activesound "Dog/Active";
+
         damagefactor "hot",1.0;
 
         tag "$TAG_DOGGY";
@@ -45,13 +40,27 @@ class Doggy : Babuin {
         hitobituary "$OB_DOGGY_HIT";
     }
 
+    override void postbeginplay(){
+        super.postbeginplay();
+
+        sprite = getspriteindex("DOG"..random(1, 5));
+    }
+
+    override void CheckFootStepSound(){
+        if (bplayingid) {
+            HDHumanoid.FootStepSound(self, 0.4, drysound: "Dog/Step/Dry");
+        } else if (!frame) {
+            A_StartSound("Dog/Step/Wet", 88, CHANF_OVERLAP);
+        }
+    }
+
     states {
-		prefetch:
-			DOG1 A 0;
-			DOG2 A 0;
-			DOG3 A 0;
-			DOG4 A 0;
-			DOG5 A 0;
+        prefetch:
+            DOG1 A 0;
+            DOG2 A 0;
+            DOG3 A 0;
+            DOG4 A 0;
+            DOG5 A 0;
         spawn:
             DOG1 A 0;
             goto idle;
@@ -72,7 +81,7 @@ class Doggy : Babuin {
                 blookallaround = false;
                 if (!random(0, 6)) SetStateLabel("spawnwander");
             }
-			loop;
+            loop;
         spawnstill:
             #### ZZ 8 A_HDLook();
             loop;
@@ -84,7 +93,7 @@ class Doggy : Babuin {
                 }
             }
             #### A 0 givebody(random(2, 12));
-			goto see;
+            goto see;
         death:
             #### I 5{
                 A_Vocalize(deathsound);
@@ -93,13 +102,13 @@ class Doggy : Babuin {
             goto deathend;
         raise:
             #### NMLKJI 5;
-			goto see;
+            goto see;
         ungib:
             #### N 6;
             #### NM 8;
             #### LKJ 6;
             #### IH 4;
-			goto see;
+            goto see;
         gib:
             #### H 0 A_XScream();
             #### HIJ 4 A_GibSplatter();
