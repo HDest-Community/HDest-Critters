@@ -3,7 +3,7 @@ class HDGhoul : Hatchling {
         +noblood
         +dontgib
         
-        +hdmobbase.doesntbeed
+        +hdmobbase.doesntbleed
 
         attacksound "Ghoul/attack";
         activesound "Ghoul/active";
