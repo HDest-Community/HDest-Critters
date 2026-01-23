@@ -6,6 +6,12 @@ class Rat : HDMobBase {
         +FRIENDLY
         -COUNTKILL
 
+        +CANNOTPUSH
+        -ACTIVATEIMPACT
+        -CANPUSHWALLS
+        -CANUSEWALLS
+        -ACTIVATEMCROSS
+
         health 8;
         gibhealth 8;
         radius 4;
