@@ -367,3 +367,11 @@ class ReverseShockImpBallTail : ReverseImpBallTail {
             stop;
     }
 }
+
+class DeadShockImp : ShockImp {
+    override void postBeginPlay() {
+        super.postBeginPlay();
+
+        A_Die("spawndead");
+    }
+}

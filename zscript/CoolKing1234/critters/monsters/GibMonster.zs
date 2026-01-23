@@ -97,3 +97,11 @@ class GibMonster : Babuin {
             loop;
     }
 }
+
+class DeadGibMonster : GibMonster {
+    override void postBeginPlay() {
+        super.postBeginPlay();
+
+        A_Die("spawndead");
+    }
+}

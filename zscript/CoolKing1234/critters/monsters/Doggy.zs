@@ -113,3 +113,11 @@ class Doggy : Babuin {
             loop;
     }
 }
+
+class DeadDoggy : Doggy {
+    override void postBeginPlay() {
+        super.postBeginPlay();
+
+        A_Die("spawndead");
+    }
+}

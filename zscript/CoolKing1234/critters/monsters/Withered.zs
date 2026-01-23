@@ -184,3 +184,19 @@ Class WitheredSummonerSeeker : Actor {
             stop;
     }
 }
+
+class DeadWithered : Withered {
+    override void postBeginPlay() {
+        super.postBeginPlay();
+
+        A_Die("spawndead");
+    }
+}
+
+class DeadWitheredSummoner : WitheredSummoner {
+    override void postBeginPlay() {
+        super.postBeginPlay();
+
+        A_Die("spawndead");
+    }
+}
