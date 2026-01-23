@@ -186,7 +186,7 @@ class ShockImp : FighterImp {
         death:
             #### O 6 A_Gravity();
             #### P 6 A_Vocalize(deathsound);
-            #### QRSTUV 5;
+            #### QRSTUV 2;
         dead:
         death.spawndead:
             #### V 3 canraise A_JumpIf(abs(vel.z) < 2, 1);
@@ -202,7 +202,7 @@ class ShockImp : FighterImp {
             #### Z 5 A_GibSplatter();
             #### [] 5;
         gibbed:
-            #### ] 5 canraise A_JumpIf(abs(vel.z) < 2, 1);
+            SLHV ] 5 canraise A_JumpIf(abs(vel.z) < 2, 1);
             wait;
             SLHW A 5 canraise A_JumpIf(abs(vel.z) >= 2, "gibbed");
             wait;
@@ -218,7 +218,7 @@ class ShockImp : FighterImp {
             SLHV ][ 8;
             #### ZYX 6;
             #### A 4;
-            goto see;
+            goto pain;
 
         falldown:
             #### N 5;
@@ -229,7 +229,7 @@ class ShockImp : FighterImp {
             wait;
 
         standup:
-            #### VUTSRQ 5;
+            #### VUTSRQ 2;
             #### # 0 A_Jump(64, 2);
             #### # 0 A_Vocalize(seesound);
             #### PO 4 {
