@@ -105,8 +105,9 @@ class WitheredSummoner : Withered {
         let numSpawned = 0;
         foreach (player : players) if(HDPlayerPawn(player.mo) && !HDSpectator(player.mo)) numSpawned += random(10, 20);
 
-        for (let i = numSpawned; i > 0; i--) Spawn('WitheredSummonerSeeker', pos);
-        invoker.summoned = true;
+        invoker.summoned = !!HDCore.spawnStuff('WitheredSummonerSeeker', pos, numSpawned, randomVel: false, allowReplace: false, allowInvalidPos: true);
+
+        HDCore.log('Critters.WitheredSummoner', LOGGING_DEBUG, "Summoner called forth "..numSpawned.."x Seekers");
     }
 
     default {
@@ -138,22 +139,6 @@ class WitheredSummoner : Withered {
 
 Class WitheredSummonerSeeker : Actor {
 
-    Array<Name> summonables;
-
-    override void PostBeginPlay() {
-        Name classes[] = {
-            'WitheredRandom',
-            'ZombieScientistRandom',
-            'MeleeZombie'
-        };
-
-        foreach (cls : classes) {
-            if ((Class<Actor>)(cls)) {
-                summonables.push(cls);
-            }
-        }
-    }
-
     default {
         +THRUACTORS
         +NOTELEPORT
@@ -171,15 +156,21 @@ Class WitheredSummonerSeeker : Actor {
     states {
         Spawn:
             TNT1 A 1 A_Chase();
-            TNT1 A 0 A_Jump(15, "SpawnLoop");
+            #### # 0 A_Jump(15, "SpawnLoop");
             loop;
         SpawnLoop:
-            TNT1 A 10 A_Wander();
-            TNT1 A 0 A_CheckSight("Create");
-            TNT1 A 0 A_Jump(5, "Die");
+            #### # 10 A_Wander();
+            #### # 0 A_CheckSight("Create");
+            #### # 0 A_Jump(5, "Die");
             loop;
         Create:
-            TNT1 A 0 A_StartSound(Spawn(summonables[random(0, summonables.Size() - 1)], pos).activesound);
+            #### # 0 {
+                let summoned = HDCore.spawnStuff('WitheredSummonSpawner', pos, randomVel: false, allowReplace: true, allowInvalidPos: true);
+                
+                if (summoned) A_StartSound(summoned.activesound);
+
+                HDCore.log('Critters.WitheredSummonerSeeker', LOGGING_DEBUG, "SummonerSeeker Successfull? "..(summoned ? summoned.getClassName().."" : "nothing"));
+            }
         Die:
             stop;
     }
