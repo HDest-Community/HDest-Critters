@@ -4,35 +4,6 @@
 
 class Withered : FighterImp {
 
-    override void PostBeginPlay() {
-        super.PostBeginPlay();
-
-        sprite = getspriteindex("ZFD"..random(1, 4));
-        resize(0.8, 1.1);
-    }
-
-    override void deathdrop() {
-        if (!bfriendly && !bhasdropped) {
-            bhasdropped = true;
-
-            if (!random(0, 6)) {
-                for (int i = 0; i < 9; i++) {
-                    DropNewItem("HDCasingBits", 200);
-                }
-            }
-        }
-    }
-
-    action void A_Lunge() {
-        A_FaceTarget(16, 16);
-        bnodropoff = false;
-        A_Changevelocity(1, 0, 0, CVF_RELATIVE);
-        if (A_JumpIfTargetInLOS("null", 20, 0, 128)) {
-            invoker.A_Vocalize(seesound);
-            SetStateLabel("jump");
-        }
-    }
-
     default {
         //$Category "Monsters/Hideous Destructor"
         //$Title "Withered"
@@ -55,6 +26,31 @@ class Withered : FighterImp {
         hitobituary "$OB_WITHERED_HIT";
     }
 
+    override void PostBeginPlay() {
+        super.PostBeginPlay();
+
+        sprite = getSpriteIndex("ZFD"..random(1, 4));
+        resize(0.8, 1.1);
+    }
+
+    override void deathdrop() {
+        if (!bFRIENDLY && !bHASDROPPED && !random(0, 6)) {
+            for (int i = 0; i < 9; i++) {
+                DropNewItem("HDCasingBits", 200);
+            }
+        }
+    }
+
+    action void A_Lunge() {
+        A_FaceTarget(16, 16);
+        bNODROPOFF = false;
+        A_Changevelocity(1, 0, 0, CVF_RELATIVE);
+        if (A_JumpIfTargetInLOS("null", 20, 0, 128)) {
+            invoker.A_Vocalize(seesound);
+            SetStateLabel("jump");
+        }
+    }
+
     states {
         prefetch:
             ZFD1 A 0;
@@ -64,15 +60,11 @@ class Withered : FighterImp {
         spawn:
             ZFD1 A 0;
             goto idle;
-        melee:
-            #### EE 4 A_FaceLastTargetPos();
-            #### F 2;
-            #### G 8 A_FireballerScratch(null, random(10, 30), ballchance: 0);
-            #### F 4;
-            goto see;
+
         missile:
             #### ABCD 2 A_Lunge();
             goto see;
+
         jump:
             #### E 3 A_FaceTarget(16, 16);
             #### F 3 A_Changevelocity(cos(pitch) * 2, 0, sin(-pitch) * 2, CVF_RELATIVE);
@@ -80,12 +72,20 @@ class Withered : FighterImp {
             #### F 1 A_ChangeVelocity(cos(pitch) * 8, 0, sin(-pitch - frandom(-4, 1)) * 8, CVF_RELATIVE);
             #### ABCD 2 A_HDChase();
             goto missile;
+
         shoot:
         lead:
         spam:
         coverfire:
         coverdecide:
         hork:
+            goto see;
+
+        melee:
+            #### EE 4 A_FaceLastTargetPos();
+            #### F 2;
+            #### G 8 A_FireballerScratch(null, random(10, 30), ballchance: 0);
+            #### F 4;
             goto see;
     }
 }

@@ -43,11 +43,11 @@ class Doggy : Babuin {
     override void postbeginplay(){
         super.postbeginplay();
 
-        sprite = getspriteindex("DOG"..random(1, 5));
+        sprite = getSpriteIndex("DOG"..random(1, 5));
     }
 
     override void CheckFootStepSound(){
-        if (bplayingid) {
+        if (bPLAYINGID) {
             HDHumanoid.FootStepSound(self, 0.4, drysound: "Dog/Step/Dry");
         } else if (!frame) {
             A_StartSound("Dog/Step/Wet", 88, CHANF_OVERLAP);
@@ -65,8 +65,8 @@ class Doggy : Babuin {
             DOG1 A 0;
             goto idle;
         spawnsniff:
-            #### A 0{
-                blookallaround = true;
+            #### A 0 {
+                bLOOKALLAROUND = true;
             }
             #### ZZZZ 4 {
                 angle += frandom(-2, 2);
@@ -78,15 +78,15 @@ class Doggy : Babuin {
             }
             #### ZZZ 2 A_HDLook();
             #### A 0 {
-                blookallaround = false;
-                if (!random(0, 6)) SetStateLabel("spawnwander");
+                bLOOKALLAROUND = false;
             }
+            #### # 0 A_JumpIf(!random(0, 6), "spawnwander");
             loop;
         spawnstill:
             #### ZZ 8 A_HDLook();
             loop;
         seeend:
-            #### A 0{
+            #### A 0 {
                 if (!random(0, 120)) {
                     A_Vocalize(seesound);
                     A_AlertMonsters();
@@ -95,9 +95,9 @@ class Doggy : Babuin {
             #### A 0 givebody(random(2, 12));
             goto see;
         death:
-            #### I 5{
+            #### I 5 {
                 A_Vocalize(deathsound);
-                bpushable = false;
+                bPUSHABLE = false;
             }
             goto deathend;
         raise:

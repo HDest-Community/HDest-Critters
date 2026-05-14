@@ -86,13 +86,14 @@ class ShockImp : FighterImp {
             goto see;
 
         shoot:
-            #### E 0 A_Jump(16,"hork");
+            #### E 0 A_Jump(16, "hork");
             goto lead;
 
         lead:
             #### # 0 A_Strafe();
             #### E 4 A_FaceLastTargetPos(40, gunheight);
             #### # 0 A_Strafe();
+            #### # 0 checkTargetInSight();
             #### E 1 A_FaceLastTargetPos(20, gunheight);
             #### # 0 A_Strafe();
             #### FG random(6, 8) A_LeadTarget(min(20, lasttargetdist / getdefaultbytype("ShockImpBall").speed));
@@ -158,7 +159,7 @@ class ShockImp : FighterImp {
 
         hork:
             #### # 0 A_Jump(156, "spam");
-            #### # 0 A_FaceLastTargetPos(40, gunheight);
+            #### # 0 A_FaceLastTargetPos(40, gunheight, lastTargetHeight);
             #### E 2 A_Strafe();
             #### # 0 A_Vocalize(seesound);
             #### EEEEE 2 A_SpawnItemEx("ReverseShockImpBallTail", 4, 24, gunheight, 1, 0, 0, 0, 160);
